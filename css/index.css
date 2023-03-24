@@ -1,75 +1,91 @@
-*{
+/*Pardrão de tela inicial 1920x1080*/
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: Sora;
 }
 
-body{
+body {
     background: #F8F6F7;
+    overflow-x: hidden;
 }
-header{
-    width: 100vw;
+
+header {
     background: white;
 }
-.nav{
-    margin: 0 320px ;
+
+.nav {
+    margin: 0 320px;
     display: flex;
     align-items: center;
-    height: 100px; 
+    height: 100px;
 }
-.nav ul {
-    
-}
-.nav-buttons{
+
+.nav ul {}
+
+.nav-buttons {
     display: flex;
     flex-direction: row;
 }
 
-.nav-options{
+.nav-options {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
 }
-.nav ul li{
+
+.nav ul li {
     list-style: none;
     width: 150px;
 }
 
-.nav .nav-contato, .nav-ajuda, .nav-logo{
+.nav .nav-contato,
+.nav-ajuda,
+.nav-logo {
     display: flex;
-    align-items: center ;
+    align-items: center;
 
 }
-.nav .nav-button button{
+
+.nav .nav-button button {
     width: 174px;
     height: 59px;
     border: none;
     color: white;
     font-weight: 600;
     font-size: 12pt;
-    
+
     background: #550FED;
     border-radius: 9px;
-    
+
 }
 
-.nav-ajuda p, .nav-contato p{
+.nav-ajuda p,
+.nav-contato p {
     font-weight: 600;
 }
 
-main{
+main {
     display: flex;
-    margin: 0 320px ;
+    margin: 0 300px;
     height: 100vh;
 }
 
-section .banner{
+section .banner {
     display: flex;
     justify-content: center;
 }
-.banner-img{
+
+.banner-img {
     margin: 64px 0;
+    width: 1320px;
+}
+
+.banner-img img {
+    width: 100%;
+    height: 100%;
 }
