@@ -24,7 +24,6 @@ header {
     height: 100px;
 }
 
-.nav ul {}
 
 .nav-buttons {
     display: flex;
@@ -213,15 +212,18 @@ h3 {
 }
 .quem_somos {
     display: flex;
-    width: 420px;
+    width: 450px;;
     height: 360px;
     background: #FFFFFF;
     border-radius: 24px;
-    margin-right: 36px;
+}
+
+#personagem2 {
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
 .quem_somos img{
-    width: 108.59px;
     height: 181.99px;
     margin: 60px 20px 60px 20px;
 }
@@ -249,8 +251,7 @@ h3 {
     line-height: 21px;
     letter-spacing: -0.04em;
     color: #404040;
-    margin-top: 20px;
-    width: 220px;
+    margin-top: 10px;
     height: 120px;
 }
 
@@ -262,6 +263,57 @@ h3 {
     line-height: 24px;
     letter-spacing: -0.04em;
     color: #550FED;
-    margin-top: 20px;
-    
+    margin-top: 50px;
+}
+
+.ajuda-container {
+    display: flex;
+    background: #550FED;
+    border-radius: 36px;
+    height: 190px;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.ajuda-card {
+    margin-left: 40px;
+}
+
+.ajuda-card h2 {  
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 29px;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    margin-top: 48px;
+}
+
+.ajuda-card p {
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+.ajuda-card h3 {
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+.ajuda-card-imagem {
+    flex-direction: row;
+    height: 100%;
+    margin-left: 15%;
 }
