@@ -1,14 +1,21 @@
 /*Pardrão de tela inicial 1920x1080*/
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Sora;
+    font-family: Sora, sans-serif;
 }
 
+/*Remover _reboot.scss*/
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0 !important ;
+    padding-left: 0 !important;
+}
+/*Remover _reboot.scss*/
+
 body {
-    background: #F8F6F7;
+    background: #F8F6F7 !important;
     overflow-x: hidden;
 }
 
@@ -18,25 +25,29 @@ header {
 
 /*Navbar*/
 .nav {
-    margin: 0 320px;
     display: flex;
     align-items: center;
     height: 100px;
+    width: 100%;
 }
 
 
 .nav-buttons {
     display: flex;
     flex-direction: row;
+    justify-content: end;
+    width: 100%;
+
 }
 
 .nav-options {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 
 }
+
+
 
 .nav ul li {
     list-style: none;
@@ -44,10 +55,10 @@ header {
 }
 
 .nav .nav-contato,
-.nav-ajuda,
-.nav-logo {
+.nav-ajuda{
     display: flex;
     align-items: center;
+    justify-content: center;
 
 }
 
@@ -67,12 +78,13 @@ header {
 .nav-ajuda p,
 .nav-contato p {
     font-weight: 600;
+    margin-bottom: 0px;
 }
 
 /*main*/
 
 main {
-    margin: 0 300px;
+    
 }
 
 /*Section 1*/
@@ -153,7 +165,8 @@ main {
     width: 100%;
 }
 
-.Bloco-principal, .Bloco-principal3 {
+.Bloco-principal,
+.Bloco-principal3 {
     border: 1px solid rgb(236, 236, 236);
     background-color: rgb(255, 255, 255);
     width: 450px;
@@ -165,7 +178,7 @@ main {
     margin-top: 60px;
 }
 
-#bloco3{
+#bloco3 {
     margin-right: 0px;
 }
 
@@ -205,14 +218,18 @@ main {
 h3 {
     margin-bottom: 20px;
 }
+
 .informacao {
     display: flex;
-    width: 100%;;
+    width: 100%;
+    ;
     margin-top: 60px;
 }
+
 .quem_somos {
     display: flex;
-    width: 450px;;
+    width: 450px;
+    ;
     height: 360px;
     background: #FFFFFF;
     border-radius: 24px;
@@ -223,7 +240,7 @@ h3 {
     margin-left: 40px;
 }
 
-.quem_somos img{
+.quem_somos img {
     height: 181.99px;
     margin: 60px 20px 60px 20px;
 }
@@ -233,17 +250,17 @@ h3 {
     margin: 60px 0px 60px 0px;
 }
 
-.infotexto h2{
+.infotexto h2 {
     font-family: 'Sora';
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
     letter-spacing: -0.04em;
-    color: #000000;    
+    color: #000000;
 }
 
-.infotexto p{
+.infotexto p {
     font-family: 'Sora';
     font-style: normal;
     font-weight: 300;
@@ -255,7 +272,7 @@ h3 {
     height: 120px;
 }
 
-.infotexto h3{
+.infotexto h3 {
     font-family: 'Sora';
     font-style: normal;
     font-weight: 600;
@@ -279,7 +296,7 @@ h3 {
     margin-left: 40px;
 }
 
-.ajuda-card h2 {  
+.ajuda-card h2 {
     font-family: 'Sora';
     font-style: normal;
     font-weight: 600;
