@@ -1,14 +1,24 @@
 /*Pardrão de tela inicial 1920x1080*/
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Sora;
+    font-family: Sora, sans-serif;
 }
 
+/*Remover _reboot.scss*/
+dl,
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 0 !important;
+    padding-left: 0 !important;
+}
+
+/*Remover _reboot.scss*/
+
 body {
-    background: #F8F6F7;
+    background: #F8F6F7 !important;
     overflow-x: hidden;
 }
 
@@ -18,26 +28,29 @@ header {
 
 /*Navbar*/
 .nav {
-    margin: 0 320px;
     display: flex;
     align-items: center;
     height: 100px;
+    width: 100%;
 }
 
-.nav ul {}
 
 .nav-buttons {
     display: flex;
     flex-direction: row;
+    justify-content: end;
+    width: 100%;
+
 }
 
 .nav-options {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 
 }
+
+
 
 .nav ul li {
     list-style: none;
@@ -45,10 +58,10 @@ header {
 }
 
 .nav .nav-contato,
-.nav-ajuda,
-.nav-logo {
+.nav-ajuda {
     display: flex;
     align-items: center;
+    justify-content: center;
 
 }
 
@@ -68,15 +81,12 @@ header {
 .nav-ajuda p,
 .nav-contato p {
     font-weight: 600;
+    margin-bottom: 0px;
 }
 
 /*main*/
 
-main {
-    margin: 0 300px;
-}
-
-/*Section 1*/
+/*Section banner*/
 .banner {
     display: flex;
     justify-content: center;
@@ -92,17 +102,19 @@ main {
     width: 100%;
     height: 100%;
 }
+/*Section banner*/
 
+/*Section Algugel*/
 .aluguel-de-carro {
     width: 100%;
-    margin-top: 48px;
     background-color: #ffffff;
     border-radius: 16px;
-    padding-bottom: 32px;
+    padding: 0 32px 32px 32px;
+    
 }
 
 .aluguel-de-carro h2 {
-    padding: 32px 24px 0px 24px;
+    padding: 32px 24px 0px 64px;
     color: #414141;
     font-weight: 600;
     margin-bottom: 40px;
@@ -110,29 +122,33 @@ main {
 
 .botao-grande,
 .botao-pequeno {
+    padding: 8px;
     background-color: #f8f6f8;
     border: none;
     border-radius: 9px;
+    margin-bottom: 16px;
     cursor: pointer;
 }
 
+.botao-grande::placeholder, .botao-pequeno::placeholder{
+    font-size: small;
+}
+
 .botao-grande {
-    width: 350px;
+    width: 100%;
     height: 60px;
-    padding-left: 10px;
-    margin-right: 10px;
+    
 }
 
 .botao-pequeno {
-    width: 173px;
+    width: 100%;
     height: 60px;
-    padding-left: 10px;
-    margin-right: 10px;
+   
 }
 
 .botao-box2 button {
-    width: 173px;
-    height: 45px;
+    width: 100%;
+    height: 60px;
     border-radius: 9px;
     border: none;
     background-color: #550FED;
@@ -141,62 +157,223 @@ main {
 
 .botao-box,
 .botao-box2 {
-    margin: 0px 16px 10px 24px;
+    padding-left: 64px;
 }
+/*Section Algugel*/
 
 
-/*Section 2*/
-
-
+/*Section Carros*/
 .principal {
-    display: flex;
-    justify-content: center;
+   width: 100%;
+   margin-left: 0px !important;
+   margin-top: 64px !important;
 }
 
-.Bloco-principal {
+.bloco-principal{
     border: 1px solid rgb(236, 236, 236);
     background-color: rgb(255, 255, 255);
-    width: 409px;
-    height: 460px;
+    width:100%;
+    height: 100%;
     padding: 20px;
     border-radius: 25px;
     text-align: center;
-    margin-right: 25px;
+ 
 }
 
-.Bloco-principal img {
+#bloco2{
+    margin: 0 32px;
+}
+
+.bloco-principal img {
     width: 90%;
 }
 
-.Bloco-principal h2 {
+.info-classes{
+    min-height: 135px;
+    max-height: 135px;
+    margin-bottom: 8px;
+}
+
+.info-classes h2 {
     font-size: 16px;
     font-weight: 500;
     color: #5f5f5f;
 }
 
-.Bloco-principal h3 {
+.info-classes h3 {
     color: #5f5f5f;
     font-size: 12px;
     font-weight: 400;
 }
 
-.Bloco-principal button {
+.bloco-principal button {
     background-color: #550fed;
     padding: 15px 50px;
     border: none;
     border-radius: 50px;
-
+    margin-bottom: 16px;
 
 }
 
-.Bloco-principal a {
+.bloco-principal a {
     color: white;
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
 }
 
-.Bloco-principal h2,
+.bloco-principal h2,
 h3 {
     margin-bottom: 20px;
 }
+/*Section Carros*/
+
+/*Section Informações*/
+.informacao {
+    display: flex;
+    width: 100%;
+    margin-top: 60px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.quem-somos {
+    display: flex;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 24px;
+}
+
+.quem-somos-card{
+    display: flex;
+}
+
+#personagem2 {
+   margin: 0 32px;
+}
+
+.quem-somos-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 220px;
+    height: 220px;
+
+}
+.quem-somos-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.infotexto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
+}
+
+.infotexto h2 {
+    display: flex;
+    align-items: center;
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.04em;
+    color: #000000;
+    height: 58px;
+    margin-top: 32px;
+}
+
+.infotexto p {
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.04em;
+    color: #404040;
+    height: 180px;
+    min-width: 70%;
+}
+
+.infotexto h3 {
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #550FED;
+    margin-bottom: 32px;
+}
+
+.ajuda-container {
+    display: flex;
+    background: #550FED;
+    border-radius: 36px;
+    height: 190px;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.ajuda-card {
+    margin-left: 40px;
+}
+
+.ajuda-card h2 {
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 29px;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    margin-top: 48px;
+}
+
+.ajuda-card p {
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+.ajuda-card h3 {
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+.ajuda-card-imagem {
+    flex-direction: row;
+    height: 100%;
+    margin-left: 15%;
+}
+/*Section Informações*/
+
+
+
+
+
+
+
+
+
+
+ /*Medida 1024*/
+
+ @media (max-width: 1200px) { 
+    
+  }
