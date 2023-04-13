@@ -364,6 +364,31 @@ h3 {
 /*Section Informações*/
 
 
+/*Footer*/
+.footer{
+    width: 70% !important;
+    margin-top: 64px;
+}
+.footer-links{
+    margin-bottom: 16px;
+}
+
+.footer-links h5{
+    
+    margin: 0 32px;
+   
+}
+.footer-links h5 a{
+    text-decoration: none;
+    color: #000000;
+}
+.footer-info p{
+    font-size: 9pt;
+    width: 75%;
+}
+
+/*Footer*/
+
 
 
 

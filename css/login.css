@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Sora, sans-serif;
+}
+
+body{
+    background: #F8F6F7 !important;
+}
+
+.box-modal{
+    height: 100vh;
+}
+
+.modal-login{
+    background-color: #fff;
+    height: 500px;
+    width: 100%;
+    border-radius: 16px;
+    padding: 32px !important;
+}
+
+
+.modal-logo{
+    margin: 32px 0 0 0;
+}
+
+.modal-login h5{
+    margin: 16px 0;
+}
+
+
+ .modal-input{
+    background-color: #EDF2F7;
+    width: 100%;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #667EEA;
+}
+
+.modal-input img{
+    width: 20px;
+    height: 20px;
+    margin: 0 16px;
+}
+
+.modal-input input{
+    height: 48px;
+    width: 84%;
+    background-color: transparent;
+    border: none;
+    color: #262627c7;
+}
+
+.modal-input input:focus{
+    outline: none;
+}
+.modal-login p{
+    font-size: 11pt;
+    color: #777777;
+}
+
+.modal-buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-buttons button{
+    width: 100%;
+    height: 48px;
+    margin-bottom: 16px;
+    
+}
+
+.modal-buttons button:first-child{
+    background: #550FED ;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+}
+
+.modal-buttons button:last-child{
+    background: transparent ;
+    color: #4A5568;
+    font-weight: 600;
+    border: 1px solid #222222b0;
+}
