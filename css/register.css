@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Sora, sans-serif;
+}
+
+dl,
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 0 !important;
+    padding-left: 0 !important;
+}
+
+body {
+    background: #F8F6F7 !important;
+    overflow-x: hidden;
+}
+
+header {
+    background: white;
+}
+
+.nav, .nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.img-car {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 20%;
+    align-items: center;
+    margin-left: 27.5%;
+}
+
+.form-group {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary {
+    display: flex;
+    width: 35%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    border: none;
+    background-color: #550FED;
+    margin: 0 auto;
+    margin-bottom: 1%;
+}
