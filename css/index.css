@@ -19,7 +19,7 @@ ul {
 
 body {
     background: #F8F6F7 !important;
-    overflow-x: hidden;
+    
 }
 
 header {
@@ -34,6 +34,9 @@ header {
     width: 100%;
 }
 
+.mobile{
+    display: none;
+}
 
 .nav-buttons {
     display: flex;
@@ -47,7 +50,7 @@ header {
     width: 100%;
     display: flex;
     flex-direction: row;
-
+    margin: 0px 16px !important;
 }
 
 
@@ -399,6 +402,145 @@ h3 {
 
  /*Medida 1024*/
 
- @media (max-width: 1200px) { 
+ @media (max-width: 768px) { 
+    .mobile{
+        display: flex;
+    }
+    .nav{
+        position: fixed;
+        background-color: #fff
+    }
+
+    .nav-buttons{
+        display: none;
+    }
+
+    .nav-options{
+        display: flex;
+        width: 100%;
+        margin: 0 !important;
+    }
+    .nav-menu{
+    }
+    .nav-mobile-button{
+        
+        height: 40px;
+        width: 50px;
+        margin-right: 8px;
+        margin-top: 8px;
+        padding: 0px 8px;
+        background-color: #550FED;
+        border: none;
+        border-radius: 8px;
+
+    }
+
+    .nav-mobile-button span{
+        display: block;
+
+       
+        width: 100%;
+        height: 3px;
+        margin-bottom: 8px;
+        
+        background-color: #ffffff;
+
+    }
+    .nav-mobile-button span:first-child{
+       margin-top: 7px;
+
+    }
+
+    .nav-mobile-menu{
+        overflow: hidden;
+        display: flex;
+        position: absolute;
+        height: 100vh;
+        width: 0px;
+        top: 0;
+        left: 0;
+        background-color: #550FED;
+
+        transition: all ease 0.2s;
+    }
+
+    .nav-mobile-menu li{
+        width: 100% !important;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 16px;
+        padding-left: 8px;
+    }
     
+    .nav-menu-close{
+        height: 40px;
+        width: 40px;
+        background-color: transparent;
+        border: none;
+
+    }
+
+    .nav-menu-close img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner{
+       padding-top: 20%;
+    }
+
+    .ajuda-card-imagem{
+        display: none;
+    }
+
+    .principal{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botao-box, .botao-box2, .aluguel-de-carro h2{
+        padding-left: 0;
+    }
+    
+    #bloco2{
+        margin: 0px;
+    }
+
+    .bloco-principal{
+        margin-bottom: 16px !important;
+    }
+
+    .informacao{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #personagem2{
+        margin: 0;
+    }
+
+    .quem-somos{
+        margin-bottom: 16px;
+    }
+
+    .ajuda-card{
+        margin-left: 30px;
+    }
+
+    .ajuda-card h2{
+        margin-top: 30px;
+    }
+
+    .footer{
+        width: 100% !important;
+    }
+
+    .footer-links h5{
+        font-size: 12pt;
+        margin: 0 16px;
+    }
+
+    .footer-info p{
+        width: 90%;
+    }
   }
