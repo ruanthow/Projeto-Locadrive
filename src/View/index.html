@@ -12,10 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <title>Locadrive</title>
 </head>
 
 <body>
+
+    <!-- NAV -->
+
     <header class="">
         <nav class="nav container">
             <ul class="nav-options row">
@@ -80,12 +85,19 @@
         </nav>
     </header>
     <main class="container">
+
+        <!-- BANNER -->
+
         <section class="banner">
+
             <div class="banner-img">
                 <img src="./assets/bannerCarro.svg" alt="">
             </div>
+
         </section>
-        <section class="container justify-content-center align-items-center d-flex">
+
+        <!-- ALUGUEL DE CARROS -->
+        <section class="container justify-content-center align-items-center d-flex ">
             <div class="aluguel-de-carro">
                 <h2 class="text-center">Aluguel de Carro</h2>
                 <div class="botao-box row">
@@ -117,7 +129,11 @@
                     </div>
                 </div>
             </div>
+
         </section>
+
+        <!-- CARROS -->
+
         <section>
             <div class="principal row">
                 <div class="bloco-principal col p-4">
@@ -130,7 +146,7 @@
                         <h3>Sua reserva garante um dos carros desse grupo.
                             Modelo sujeito à disponibilidade da agência.</h3>
                     </div>
-                    <button> <a href="google.com">Conferir Grupo</a></button>
+                    <a class="btn btn-primary" href="#">Conferir Grupo</a>
                 </div>
                 <div class="bloco-principal col p-4" id="bloco2">
                     <img src="./assets/sedan.png" alt="sedan">
@@ -140,7 +156,7 @@
                         <h3>Sua reserva garante um dos carros desse grupo.
                             Modelo sujeito à disponibilidade da agência.</h3>
                     </div>
-                    <button> <a href="google.com">Conferir Grupo</a></button>
+                    <a class="btn btn-primary" href="#">Conferir Grupo</a>
                 </div>
                 <div class="bloco-principal col p-4">
                     <img src="./assets/suv.png" alt="suv">
@@ -150,10 +166,12 @@
                         <h3>Sua reserva garante um dos carros desse grupo.
                             Modelo sujeito à disponibilidade da agência.</h3>
                     </div>
-                    <button> <a href="google.com">Conferir Grupo</a></button>
+                    <a class="btn btn-primary" href="#">Conferir Grupo</a>
                 </div>
             </div>
         </section>
+
+        <!-- QUEM SOMOS -->
 
         <section class="informacao row">
             <div class="quem-somos col">
@@ -166,7 +184,7 @@
                         <p>Somos para todos! Usamos a tecnologia a favor dos nossos clientes, como um meio para
                             conseguirmos
                             preços mais acessíveis.</p>
-                        
+
                     </div>
                 </div>
             </div>
@@ -180,7 +198,7 @@
                         <p>Utilizamos pontos de programas de fidelidade que seriam perdidos ou não utilizaVdos para que
                             mais
                             pessoas possam comprar passagens a preços mais acessíveis.</p>
-                        
+
                     </div>
                 </div>
             </div>
@@ -193,11 +211,15 @@
                         <h2>NOSSO BLOG</h2>
                         <p>O locadrive é a nossa plataforma de experiências de viagem e traz a você dicas especiais de
                             destinos, cultura, gastronomia e hospedagem.</p>
-                        
+
                     </div>
                 </div>
             </div>
         </section>
+
+
+
+        <!-- CENTRAL DE AJUDA -->
 
         <section class="ajuda-container">
             <div class="ajuda-card">
@@ -210,18 +232,143 @@
             </div>
         </section>
     </main>
-    <footer class="footer container d-flex flex-column">
-        <div class="footer-links d-flex flex-row justify-content-center">
-            <h5><a href="#">Privacidade</a></h5>
-            <h5><a href="#">Termos e Condições</a></h5>
-            <h5><a href="#">©2023 locadrive</a></h5>
+
+        <section class="container-fluid d-flex flex-column pergunta-box justify-content-center align-items-center">
+            <div class="col-8 d-flex flex-column">
+            <h2 class="text-center">Encontre seu carro conosco: perguntas frequentes</h2>
+            <div class="col">
+                <button class="accordion">Como o LocaDrive encontra tantos carros para alugar a preços tão
+                    baixos?</button>
+                <div class="panel">
+                    <p>O LocaDrive compara os preços de aluguel de carros das principais locadoras de veículos, como
+                        Thrifty, Dollar, Enterprise, Hertz, Payless e muito mais. Tudo para encontrar a melhor oferta.
+                    </p>
+                </div>
+
+                <button class="accordion">O que há de especial em comparar as ofertas de aluguel de carros no
+                    KAYAK?</button>
+                <div class="panel">
+                    <p>Procurando o menor preço? Podemos ajudar. A nossa classificação de preços dos carros para aluguel
+                        permite que você acesse rapidamente as ofertas mais baratas e/ou mais caras - a viagem é sua,
+                        então você que sabe. Às vezes, a mesma oferta estará disponível em vários sites. Todos os
+                        fornecedores são mostrados para que você possa escolher seu preferido, mas destacamos uma oferta
+                        principal com base em fatores como popularidade junto aos clientes ou classificações.</p>
+                </div>
+
+                <button class="accordion">Qual é a idade mínima para alugar um carro?</button>
+                <div class="panel">
+                    <p>A idade mínima estabelecida por lei para aluguel de carros depende do país. Nos EUA e no Canadá,
+                        os motoristas devem ter pelo menos 21 anos. No entanto, alguns estados e províncias permitem o
+                        aluguel por motoristas com idade a partir de 18 anos. Na Europa e na Ásia, a idade mínima varia
+                        entre 18 e 21, mas algumas agências exigem que os motoristas tenham pelo menos 25 anos de idade.
+                        Lembre-se de que a maioria das agências cobra taxas diárias para motoristas com menos de 25
+                        anos.</p>
+                </div>
+
+                <button class="accordion">Motoristas com carteira recente podem alugar um carro?</button>
+                <div class="panel">
+                    <p>As políticas para novos motoristas variam de acordo com a locadora de carros. Algumas exigem que
+                        os motoristas possuam carteira há pelo menos um ano, enquanto outras exigem uma carteira de
+                        motorista válida durante o período de aluguel. Confira as exigências diretamente com a locadora.
+                    </p>
+                </div>
+
+                <button class="accordion">Posso ir de um país a outro em um carro alugado?</button>
+                <div class="panel">
+                    <p>Nos EUA, geralmente não é problema cruzar divisas estaduais ou a fronteira com o Canadá. No
+                        entanto, você provavelmente pagará uma taxa de seguro extra se quiser viajar para o México. A
+                        Europa tem regras semelhantes, e você precisará de pagar uma cobertura além-fronteiras se quiser
+                        viajar de um país para outro. Se não fizer isso, é provável que o seu seguro de automóvel perca
+                        a validade. Cruzar fronteiras na África e na Ásia costuma ser mais difícil, e você vai precisar
+                        de documentação adicional para a fronteira. Recomendamos informar a locadora de carros sobre o
+                        itinerário planejado.</p>
+                </div>
+
+                <button class="accordion">Como posso encontrar as melhores ofertas de carros para alugar no
+                    KAYAK?</button>
+                <div class="panel">
+                    <p>Uma simples pesquisa de carros de aluguel em https://www.locadrive.online/cars verifica preços em
+                        centenas de sites de viagens em segundos. Reunimos ofertas de aluguel de carros disponíveis em
+                        toda a web e as colocamos em um só lugar. Na página de resultados de pesquisa, você pode usar
+                        vários filtros para comparar as opções disponíveis para um mesmo tipo de veículo que pretende
+                        locar e escolher facilmente o melhor preço entre todas as ofertas disponibilizadas a partir de
+                        sites de viagens diretamente na sua tela, sem precisar pagar qualquer taxa extra ao KAYAK.</p>
+                </div>
+
+                <button class="accordion">Que tipo de carros posso alugar no KAYAK?</button>
+                <div class="panel">
+                    <p>No KAYAK você pode encontrar ofertas de todos os tipos de carros de aluguel, incluindo veículos
+                        pequenos, médios, grandes, SUV, van, de luxo, caminhonete, conversíveis e comerciais.</p>
+                </div>
+
+                <button class="accordion">Posso devolver o carro em um local diferente?</button>
+                <div class="panel">
+                    <p>Você pretende pegar o carro alugado em uma cidade e devolver em outra? Nós podemos cuidar disso.
+                        Ao fazer uma busca de aluguel de carros no LocaDrive, basta selecionar a opção "Outro local".
+                        Você
+                        poderá inserir os locais de retirada e devolução desejados. Nesse caso, a maioria das locadoras
+                        de veículos cobra uma taxa de retorno do carro entre agências.</p>
+                </div>
+
+                <button class="accordion">Posso alugar um carro sem cartão de crédito?</button>
+                <div class="panel">
+                    <p>É pouco comum conseguir alugar um carro sem usar cartão de crédito, mas não é impossível.
+                        Diversas agências aceitam pagamento em cartão de débito em aeroportos, desde que você apresente
+                        uma comprovação da viagem de volta. Esteja ciente que a agência pode fazer uma verificação de
+                        crédito baseada nos seus dados e provavelmente vai solicitar uma retenção de autorização da sua
+                        conta como depósito-caução. Se você pretende pagar com cartão de débito, é sempre recomendável
+                        verificar as condições com a locadora antes de reservar.</p>
+                </div>
+
+                <button class="accordion">É mais barato alugar um carro no aeroporto ou fora dele?</button>
+                <div class="panel">
+                    <p>Você costuma encontrar as melhores ofertas se escolher uma locadora fora da área do aeroporto. As
+                        agências de locação oferecem uma opção muito conveniente para quem deseja retirar o carro
+                        diretamente no local. No entanto, como a demanda costuma ser maior, os preços tendem a ser
+                        ligeiramente mais altos. Algumas locadoras oferecem serviços de transporte do aeroporto para a
+                        agência e vice-versa.</p>
+                </div>
+            </div>
+        </section>
+
+   
+    <div class="footer-box">
+        <footer class="footer container d-flex flex-column">
+            <div class="d-flex container">
+            <div class="col"><img src="assets/logo.svg" alt="">
+            </div>
+            <div class="col pe-5">
+                <p>Somos LocaDrive</p>
+                <h1>Ajuda</h1>
+                <h1>Configurações de Privacidade</h1>
+                <h1>Entrar</h1>
+            </div>
+            <div class="col pe-5">
+                <p>Informações Importantes</p>
+                <h1>Política de Cookies</h1>
+                <h1>Política de Privacidade</h1>
+                <h1>Termos de Serviço</h1>
+                <h1>Dados da Empresa</h1>
+            </div>
+            <div class="col">
+                <p>Promova seu negócio</p>
+                <h1>Explorar</h1>
+                <h1>Empresa</h1>
+                <h1>Parceiros</h1>
+                <h1>Viagens</h1>
+            </div>
         </div>
-        <div class="footer-info d-flex flex-row justify-content-center">
-            <p>Pesquise e compare aluguel de carros com o locadrive. Busque pela melhor oferta de locação de carros para
-                os principais destinos no mundo todo. O locadrive pesquisa centenas de sites de viagem para ajudar você
-                a encontrar o aluguel de carro ideal para você.</p>
+        <div class="text-center py-5">© LocaDrive Ltd 2023
         </div>
-    </footer>
+
+        </footer>
+    </div>
+
+    <div class="buttonzap">
+        <a href='https://api.whatsapp.com/send?phone=55999999999&' class="icon" target='_blank'><i
+                class="fab fa-whatsapp"></i></a>
+    </div>
+
     <script src="./js/index.js"></script>
 </body>
 
