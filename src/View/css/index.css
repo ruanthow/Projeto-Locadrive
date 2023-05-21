@@ -1,3 +1,14 @@
+/* SCROLL BAR */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d5c6c6;
+    border-radius: 20px;
+}
+
 /*Pardrão de tela inicial 1920x1080*/
 * {
     padding: 0;
@@ -110,14 +121,12 @@ header {
 /*Section Algugel*/
 .aluguel-de-carro {
     width: 100%;
-    background-color: #ffffff;
     border-radius: 16px;
-    padding: 0 32px 32px 32px;
-    
+
 }
 
 .aluguel-de-carro h2 {
-    padding: 32px 24px 0px 64px;
+    
     color: #414141;
     font-weight: 600;
     margin-bottom: 40px;
@@ -125,16 +134,17 @@ header {
 
 .botao-grande,
 .botao-pequeno {
-    padding: 8px;
+    padding: 30px;
     background-color: #f8f6f8;
     border: none;
     border-radius: 9px;
     margin-bottom: 16px;
     cursor: pointer;
+    background-color: rgb(227, 227, 227);
 }
 
 .botao-grande::placeholder, .botao-pequeno::placeholder{
-    font-size: small;
+    font-size: 15px;
 }
 
 .botao-grande {
@@ -160,9 +170,10 @@ header {
 
 .botao-box,
 .botao-box2 {
-    padding-left: 64px;
+    justify-content: center;
+    width: 100%;
 }
-/*Section Algugel*/
+/*Section Aluguel*/
 
 
 /*Section Carros*/
@@ -180,6 +191,7 @@ header {
     padding: 20px;
     border-radius: 25px;
     text-align: center;
+    filter: drop-shadow(10px 15px 15px rgba(0, 0, 0, 0.067));
  
 }
 
@@ -245,10 +257,12 @@ h3 {
     width: 100%;
     background: #FFFFFF;
     border-radius: 24px;
+    filter: drop-shadow(10px 15px 15px rgba(0, 0, 0, 0.067));
 }
 
 .quem-somos-card{
     display: flex;
+    padding: 30px;
 }
 
 #personagem2 {
@@ -273,6 +287,7 @@ h3 {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    
   
 }
 
@@ -294,11 +309,11 @@ h3 {
     font-family: 'Sora';
     font-style: normal;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 21px;
     letter-spacing: -0.04em;
     color: #404040;
-    height: 180px;
+    height: 150px;
     min-width: 70%;
 }
 
@@ -521,6 +536,7 @@ h3 {
 
     .quem-somos{
         margin-bottom: 16px;
+        
     }
 
     .ajuda-card{
