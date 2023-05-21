@@ -16,7 +16,6 @@ function getAllUsers(){
     $.post("/Projeto-Locadrive/src/Controller/getCliente.php", dados , (data, status)=>{
             
             response = JSON.parse(data)
-           
             tableBody.innerHTML = ''
             response.map((client)=>{
                 return(
