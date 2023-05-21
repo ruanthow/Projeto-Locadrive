@@ -9,10 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 
     <title>Locadrive</title>
 </head>
@@ -99,7 +103,8 @@
         <!-- ALUGUEL DE CARROS -->
         <section class="container justify-content-center align-items-center d-flex ">
             <div class="aluguel-de-carro">
-                <h2 class="text-center">Aluguel de Carro</h2>
+                <h2 class="text-center">Conheça a nossa Frota</h2>
+                <p class="text-center">As melhores condições para você reservar e aproveitar</p>
                 <div class="botao-box row">
                     <div class="col-xl-4 col-lg-12 ">
                         <input class="botao-grande" type="text" placeholder="Retirada" />
@@ -170,10 +175,10 @@
                 </div>
             </div>
         </section>
-
-        <!-- QUEM SOMOS -->
-
-        <section class="informacao row">
+    </main>
+    <!-- QUEM SOMOS -->
+    <div class="informacao-box">
+        <section class="informacao container">
             <div class="quem-somos col">
                 <div class="quem-somos-card row d-flex align-items-center">
                     <div class="quem-somos-img col-xxl-5">
@@ -219,9 +224,10 @@
 
 
 
+
         <!-- CENTRAL DE AJUDA -->
 
-        <section class="ajuda-container">
+        <section class="ajuda-container container">
             <div class="ajuda-card">
                 <h2>CENTRAL DE AJUDA</h2>
                 <p>Escolha como você gostaria de ser atendido.</p>
@@ -231,11 +237,12 @@
                 <img src="./assets/imagemajuda.svg" alt="">
             </div>
         </section>
-    </main>
+    </div>
 
-        <section class="container-fluid d-flex flex-column pergunta-box justify-content-center align-items-center">
-            <div class="col-8 d-flex flex-column">
-            <h2 class="text-center">Encontre seu carro conosco: perguntas frequentes</h2>
+
+    <section class="container-fluid d-flex flex-column pergunta-box justify-content-center align-items-center">
+        <div class="col-8 d-flex flex-column">
+            <h2 class="text-center">DÚVIDAS FREQUENTES</h2>
             <div class="col">
                 <button class="accordion">Como o LocaDrive encontra tantos carros para alugar a preços tão
                     baixos?</button>
@@ -246,7 +253,7 @@
                 </div>
 
                 <button class="accordion">O que há de especial em comparar as ofertas de aluguel de carros no
-                    KAYAK?</button>
+                    LocaDrive?</button>
                 <div class="panel">
                     <p>Procurando o menor preço? Podemos ajudar. A nossa classificação de preços dos carros para aluguel
                         permite que você acesse rapidamente as ofertas mais baratas e/ou mais caras - a viagem é sua,
@@ -285,19 +292,21 @@
                 </div>
 
                 <button class="accordion">Como posso encontrar as melhores ofertas de carros para alugar no
-                    KAYAK?</button>
+                    LocaDrive?</button>
                 <div class="panel">
                     <p>Uma simples pesquisa de carros de aluguel em https://www.locadrive.online/cars verifica preços em
                         centenas de sites de viagens em segundos. Reunimos ofertas de aluguel de carros disponíveis em
                         toda a web e as colocamos em um só lugar. Na página de resultados de pesquisa, você pode usar
                         vários filtros para comparar as opções disponíveis para um mesmo tipo de veículo que pretende
                         locar e escolher facilmente o melhor preço entre todas as ofertas disponibilizadas a partir de
-                        sites de viagens diretamente na sua tela, sem precisar pagar qualquer taxa extra ao KAYAK.</p>
+                        sites de viagens diretamente na sua tela, sem precisar pagar qualquer taxa extra ao LocaDrive.
+                    </p>
                 </div>
 
-                <button class="accordion">Que tipo de carros posso alugar no KAYAK?</button>
+                <button class="accordion">Que tipo de carros posso alugar no LocaDrive?</button>
                 <div class="panel">
-                    <p>No KAYAK você pode encontrar ofertas de todos os tipos de carros de aluguel, incluindo veículos
+                    <p>No LocaDrive você pode encontrar ofertas de todos os tipos de carros de aluguel, incluindo
+                        veículos
                         pequenos, médios, grandes, SUV, van, de luxo, caminhonete, conversíveis e comerciais.</p>
                 </div>
 
@@ -329,37 +338,91 @@
                         agência e vice-versa.</p>
                 </div>
             </div>
-        </section>
+    </section>
 
-   
+    
+    <!-- OFERTAS EXCLUSIVAS -->
+    <div class="oferta-box">
+        <section class=" d-flex oferta justify-content-center align-items-center">
+            
+            <div>
+                <h1>INSCREVA-SE PARA RECEBER OFERTAS EXCLUSIVAS</h1>
+                <form action="">
+    
+                    <input type="text" id="nome" placeholder="Nome" />
+    
+                    <input type="text" id="nome" placeholder="Digite seu e-mail" />
+                    <a href="#">EU QUERO</a>
+                </form>
+            </div>
+    
+        </section>
+    
+    </div>
+
     <div class="footer-box">
         <footer class="footer container d-flex flex-column">
             <div class="d-flex container">
-            <div class="col"><img src="assets/logo.svg" alt="">
+                <div class="col"><img src="assets/logo.svg" alt="">
+                </div>
+                <div class="col pe-5">
+                    <p>Somos LocaDrive</p>
+                    <h1>Ajuda</h1>
+                    <h1>Configurações de Privacidade</h1>
+                    <h1>Entrar</h1>
+                </div>
+                <div class="col pe-5">
+                    <p>Informações Importantes</p>
+                    <h1>Política de Cookies</h1>
+                    <h1>Política de Privacidade</h1>
+                    <h1>Termos de Serviço</h1>
+                    <h1>Dados da Empresa</h1>
+                </div>
+                <div class="col">
+                    <p>Promova seu negócio</p>
+                    <h1>Explorar</h1>
+                    <h1>Empresa</h1>
+                    <h1>Parceiros</h1>
+                    <h1>Viagens</h1>
+                </div>
             </div>
-            <div class="col pe-5">
-                <p>Somos LocaDrive</p>
-                <h1>Ajuda</h1>
-                <h1>Configurações de Privacidade</h1>
-                <h1>Entrar</h1>
+            <div class="container justify-content-center d-flex flex-column align-items-center pag">
+                <h1>formas de pagamento</h1>
+                <p>Pague no cartão de crédito em até 12X com juros, boleto à vista ou parcelado, transferência bancária
+                    ou com pix!</p>
+                <div>
+                    <img src="assets/cartao/mastercard.webp" alt="">
+                    <img src="assets/cartao/amex.webp" alt="">
+                    <img src="assets/cartao/sorocred.webp" alt="">
+                    <img src="assets/cartao/diners.webp" alt="">
+                    <img src="assets/cartao/hipercard.webp" alt="">
+                    <img src="assets/cartao/elo.webp" alt="">
+                    <img src="assets/cartao/credz.webp" alt="">
+                    <img src="assets/cartao/hiper.webp" alt="">
+                    <img src="assets/cartao/sorocred-1.webp" alt="">
+                    <img src="assets/cartao/itau.webp" alt="">
+                    <img src="assets/cartao/bradesco.webp" alt="">
+                    <img src="assets/cartao/santander.webp" alt="">
+                    <img src="assets/cartao/bb.webp" alt="">
+                    <img src="assets/cartao/banrisul.webp" alt="">
+                    <img src="assets/cartao/caixa.webp" alt="">
+                    <img src="assets/cartao/safetyPay.webp" alt="">
+                    <img src="assets/cartao/jcb.webp" alt="">
+                    <img src="assets/cartao/discover.webp" alt="">
+                    <img src="assets/cartao/aura.webp" alt="">
+                    <img src="assets/cartao/pix.webp" alt="">
+                </div>
             </div>
-            <div class="col pe-5">
-                <p>Informações Importantes</p>
-                <h1>Política de Cookies</h1>
-                <h1>Política de Privacidade</h1>
-                <h1>Termos de Serviço</h1>
-                <h1>Dados da Empresa</h1>
+            <div class="text-center py-5 social">
+                <div class="fs-4 py-4">
+                    <h1 class="fw-bold">siga-nos!</h1>
+                    <i class="fa-brands fa-square-facebook" style="color: #383333;"></i>
+                    <i class="fa-brands fa-twitter px-3" style="color: #383333;"></i>
+                    <i class="fa-brands fa-instagram" style="color: #383333;"></i>
+                </div>
+                <p class="footer-text"> © 2023 LOCADRIVE. TODOS OS DIREITOS RESERVADOS.
+                </p>
             </div>
-            <div class="col">
-                <p>Promova seu negócio</p>
-                <h1>Explorar</h1>
-                <h1>Empresa</h1>
-                <h1>Parceiros</h1>
-                <h1>Viagens</h1>
-            </div>
-        </div>
-        <div class="text-center py-5">© LocaDrive Ltd 2023
-        </div>
 
         </footer>
     </div>
@@ -369,6 +432,7 @@
                 class="fab fa-whatsapp"></i></a>
     </div>
 
+    <script src="https://kit.fontawesome.com/b06b4f71c3.js" crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
 </body>
 
