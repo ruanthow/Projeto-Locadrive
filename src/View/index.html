@@ -90,13 +90,41 @@
     </header>
     <main class="container">
 
-        <!-- BANNER -->
+        <!-- SLIDER -->
 
-        <section class="banner">
+        <section class="slider">
+            <div class="slider-content">
+                <input type="radio" name="btn-radio" id="radio1">
+                <input type="radio" name="btn-radio" id="radio2">
+                <input type="radio" name="btn-radio" id="radio3">
 
-            <div class="banner-img">
-                <img src="./assets/bannerCarro.svg" alt="">
+                <div class="slide-box primeiro">
+                    <img src="assets/banner1.webp" alt="slide 1">
+                </div>
+
+                <div class="slide-box">
+                    <img src="assets/banner2.webp" alt="slide 1">
+                </div>
+
+                <div class="slide-box">
+                    <img src="assets/banner3.webp" alt="slide 1">
+                </div>
+            
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
             </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+
+        </div>
+           
 
         </section>
 
@@ -151,7 +179,7 @@
                         <h3>Sua reserva garante um dos carros desse grupo.
                             Modelo sujeito à disponibilidade da agência.</h3>
                     </div>
-                    <a class="btn btn-primary" href="#">Conferir Grupo</a>
+                    <a class="btn btn-primary fw-bold" href="#">Conferir Grupo</a>
                 </div>
                 <div class="bloco-principal col p-4" id="bloco2">
                     <img src="./assets/sedan.png" alt="sedan">
@@ -161,7 +189,7 @@
                         <h3>Sua reserva garante um dos carros desse grupo.
                             Modelo sujeito à disponibilidade da agência.</h3>
                     </div>
-                    <a class="btn btn-primary" href="#">Conferir Grupo</a>
+                    <a class="btn btn-primary fw-bold" href="#">Conferir Grupo</a>
                 </div>
                 <div class="bloco-principal col p-4">
                     <img src="./assets/suv.png" alt="suv">
@@ -171,7 +199,7 @@
                         <h3>Sua reserva garante um dos carros desse grupo.
                             Modelo sujeito à disponibilidade da agência.</h3>
                     </div>
-                    <a class="btn btn-primary" href="#">Conferir Grupo</a>
+                    <a class="btn btn-primary fw-bold" href="#">Conferir Grupo</a>
                 </div>
             </div>
         </section>
@@ -343,16 +371,18 @@
     
     <!-- OFERTAS EXCLUSIVAS -->
     <div class="oferta-box">
-        <section class=" d-flex oferta justify-content-center align-items-center">
-            
-            <div>
-                <h1>INSCREVA-SE PARA RECEBER OFERTAS EXCLUSIVAS</h1>
+        <section class="d-flex container justify-content-center align-items-center">
+            <div class="oferta-box">
+                <h1>INSCREVA-SE PARA RECEBER <b>OFERTAS EXCLUSIVAS</b></h1>
+                
+            </div>
+            <div class="oferta">
+                
                 <form action="">
     
                     <input type="text" id="nome" placeholder="Nome" />
-    
                     <input type="text" id="nome" placeholder="Digite seu e-mail" />
-                    <a href="#">EU QUERO</a>
+                    <button class="btn-oferta">Eu Quero</button>
                 </form>
             </div>
     
