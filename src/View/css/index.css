@@ -230,7 +230,6 @@ header {
     border-radius: 9px;
     margin-bottom: 16px;
     cursor: pointer;
-    background-color: #f5eeee);
 }
 
 .botao-grande::placeholder, .botao-pequeno::placeholder{

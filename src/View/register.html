@@ -13,6 +13,9 @@
 
   </head>
   <body>
+
+    <!--  LOGO NAV  -->
+
     <header>
         <nav class="nav">
             <div class="container">
@@ -26,8 +29,15 @@
             </div>
         </nav>
     </header>
+
+    <!--  FIM LOGO NAV  -->
+
+
     <main>
         <div class="content">
+          
+          <!--  FORM  -->
+
         <form method="post" class="col-7">
             <input type="hidden" name="cad" value="cadastrar">
             <div class="form-row">
@@ -62,6 +72,7 @@
                 <span class="validacao">Minimo de 8 caracteres</span>
               </div>
             </div>
+
             <div class="form-row">
               <div class="col-md-6 mb-3">
                 <label for="validationDefault03">Cidade</label>
@@ -95,18 +106,24 @@
                 <span class="validacaoData">Data invalida</span>
               </div>
             </div>
+
             <div class="form-group">
-              <div class="form-check col-md-6 mb-3">
+              <div class="form-check">
+                
                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-                <label class="form-check-label" for="invalidCheck2">
-                  Concordo com os termos e condições
-                </label>
+                <label class="form-check-label" for="invalidCheck2">Concordo com os termos e condições</label>
+                <button class="btn-primary" type="button" onclick="enviar()">Enviar</button>
+    
               </div>
-              <img class="img-car" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/96fdb578684029.5cac4a000cece.gif" alt="">
+              
             </div>
-            <button class="btn-primary" type="button" onclick="enviar()">Enviar</button>
+           
           </form>
+
+           <!--  FIM FORM  -->
+
         </div>
+
     </main>
 
 
