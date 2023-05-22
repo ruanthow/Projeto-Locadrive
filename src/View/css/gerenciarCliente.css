@@ -1,30 +1,26 @@
 *{
-    font-family: Sora, sans-serif;
-}
+    font-family: 'Nunito', sans-serif;
 
 .sideMenu{
-
-    background: #550FED;
+    background: #ffffff;
     height: 100vh;
+    filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.021));
 }
 .nameAdm{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #3A09A3;
-    border-bottom: 1px solid white;
 }
 
 .nameAdm h3{
-    color: white;
+    color: #242d3d;
     margin: 32px 0;
-    
+    font-weight: 800;
 }
 
 .actionClient{
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid white;
 }
 
 .actionClient h5{
@@ -33,21 +29,54 @@
     
 }
 
+
+ #btnSearch img{
+    background-color: #5101FF;
+    width: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 70px;
+}
+
+#btnSearch img:hover{
+    background-color: #4b09d8;
+    width: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 70px;
+}
+
+
+
 .btnAction{
     background-color: transparent;
     border: none;
-    height: 40px;
-    margin: 8px 0;
+    height: 60px;
+    margin: 10px;
+    transition: 1s;
 }
 
 .btnAction:hover{
-    background-color: #4009B6;
+    background-color: #202020;
+    border: none;
+    height: 60px;
+    margin: 10px;
+    transition: 0.4s;
+    border-radius: 8px;
+    filter: invert(1);
 }
 
+
+
+
 .btnAction div strong{
-    color: white;
-    margin-left: 4px;
+    color: #39393a;
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: 500;
 }
+
+
 .iconList, .iconEdit{
     display: flex;
     width: 25px;
@@ -69,10 +98,15 @@
     height: 100vh;
 }
 
+
+.menuPesquisaSelect{
+    padding: 15px;
+    border: 1px solid #d1d1d1;
+}
+
 .menuPesquisa{
     height: 98px;
-    background-color: #F8F6F7;
-    border-bottom: 1px solid #5101FF;
+    background-color: #ffffff;
 }
 
 .menuPesquisa h4{
@@ -81,36 +115,45 @@
 }
 
 .menuPesquisaInput{
-    background-color: #5101FF;
+    background-color: #ececec;
     margin-right: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 350px;
 }
 
 .menuPesquisaInput input{
     height: 40px;
     padding: 8px;
-
     background-color: transparent;
-    color: white;
-
+    color: rgb(14, 14, 14);
     border: none;
     outline: none;
 
 }
 
 .menuPesquisaInput input::placeholder{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
 }
 
 .menuPesquisaInput button{
     height: 40px;
-    background-color: #3A09A3;
     border: none;
    
 }
 
+
+
 .boxTable{
     margin: 32px 0;
 }
+
+
+.table th{
+    padding: 20px;
+}
+
 
 .table tbody{
     background-color: #5101FF !important;
@@ -119,7 +162,8 @@
 }
 
 .table thead{
-    background-color: #4a0fc9 !important;
+    background-color: #5101FF  !important;
     color: #fff !important;
     font-weight: 600;
+
 }

@@ -8,20 +8,23 @@ function htmlCliente(){
         <div class='menuPesquisa d-flex align-items-center'>
             <h4>Clientes</h4>
             <div class="menuPesquisaInput">
-                <input class='form-input' type='text' id="inputSearch" placeholder="pesquisar"/>
+                <input class='form-input' type='text' id="inputSearch" placeholder="Pesquisar"/>
                 <button type='button' id="btnSearch" onclick="getAllUsers()">
                     <div>
-                        <img src="./assets/iconSend.svg" alt="">
+                        <img src="./assets/Arrow - Left.svg" alt="">
                     </div>
                 </button>
             </div>
+            
             <div class='col-2'>
                 <select id="typeData" class='menuPesquisaSelect form-select' aria-label='Default select example'>
-                    <option value='id'>id</option>
-                    <option value='nome'>nome</option>
-                    <option value='email'>email</option>
+                    <option value='id'>ID</option>
+                    <option value='nome'>Nome</option>
+                    <option value='email'>E-mail</option>
                 </select>
+                
             </div>
+
         </div>
         <div class='d-flex justify-content-center'>
             <div class='boxTable col-10'>
@@ -31,13 +34,13 @@ function htmlCliente(){
                             <th scope='col'>id</th>
                             <th scope='col'>Nome</th>
                             <th scope='col'>Sobrenome</th>
-                            <th scope='col'>email</th>
-                            <th scope='col'>senha</th>
-                            <th scope='col'>cidade</th>
-                            <th scope='col'>estado</th>
-                            <th scope='col'>telefone</th>
-                            <th scope='col'>cep</th>
-                            <th scope='col'>data</th>
+                            <th scope='col'>E-mail</th>
+                            <th scope='col'>Senha</th>
+                            <th scope='col'>Cidade</th>
+                            <th scope='col'>Estado</th>
+                            <th scope='col'>Telefone</th>
+                            <th scope='col'>Cep</th>
+                            <th scope='col'>Data</th>
                         </tr>
                     </thead>
                     <tbody id="tableBody">
