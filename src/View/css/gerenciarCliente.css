@@ -5,7 +5,7 @@
 .sideMenu{
 
     background: #550FED;
-    height: 100vh;
+    height: auto;
 }
 .nameAdm{
     display: flex;
