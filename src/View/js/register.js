@@ -3,7 +3,6 @@ import {paramsCampos} from "http://localhost/Projeto-Locadrive/src/components/va
 paramsCampos(".required", ".validacao", ".validacaoData");
 
 export function receberValores(valores){
-
        $.ajax({
             url: '/Projeto-Locadrive/src/Controller/createCliente.php',
             type: 'POST',
@@ -12,7 +11,6 @@ export function receberValores(valores){
         })
             .done((data) => {
                 console.log(data);
-                window.location.href = "http://localhost/Projeto-Locadrive/src/View/"
             })
             .fail((jqXHR, textStatus, errorThrown) => {
                 console.log(errorThrown);

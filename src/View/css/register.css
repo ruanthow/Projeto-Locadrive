@@ -8,12 +8,13 @@ ul {
 }
 
 body {
-    background: #F8F6F7 !important;
+    background: #ffffff!important;
     overflow-x: hidden;
 }
 
 header {
     background: white;
+    filter: drop-shadow(0px 50px 250px rgba(0, 0, 0, 0.137));
 }
 
 .nav, .nav-logo {
@@ -32,6 +33,15 @@ header {
     align-items: center;
 }
 
+.content input {
+    padding: 25px;
+    border: none;
+}
+
+.form-control {
+    background-color: #f5eeee;
+}
+
 .img-car {
     display: flex;
     justify-content: center;
@@ -43,9 +53,14 @@ header {
 
 .form-group {
     display: flex;
-    width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
+    margin-top: 10px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
 }
 
 .validacao, .validacaoData{
@@ -54,15 +69,15 @@ header {
     color: #ca2e2e;
 }
 
-
 .btn-primary {
-    display: flex;
-    width: 35%;
-    align-items: center;
-    justify-content: center;
-    border-radius: 7px;
+    padding: 15px;
+    width: 250px;
     border: none;
-    background-color: #550FED;
-    margin: 0 auto;
-    margin-bottom: 1%;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 50px;
 }
+
+
+

@@ -1,4 +1,5 @@
 import {receberValores} from 'http://localhost/Projeto-Locadrive/src/View/js/register.js';
+
 // let campos = document.querySelectorAll(".required"); 
 // let msgErro = document.querySelectorAll(".validacao"); 
 // let msgErroData = document.querySelector(".validacaoData"); 
@@ -77,6 +78,7 @@ window.validNameSobrenome = function () {
     let campoNome = nomeRegex.test(campos[0].value);
     let campoSobrenome = sobrenomeRegex.test(campos[1].value);
 
+    console.log(campoNome);
 
     if (campoNome && campoSobrenome) {
         setValid(0, 1);
@@ -223,7 +225,7 @@ window.validData = function () {
 window.enviar =  function () {
     usuarioValid = campos[2].value;
     let dados = {
-
+        
         nomeValid: nomeValid,
         sobrenomeValid: sobrenomeValid,
         usuarioValid: usuarioValid,

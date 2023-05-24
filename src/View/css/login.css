@@ -19,6 +19,7 @@ body{
     width: 100%;
     border-radius: 16px;
     padding: 32px !important;
+    filter: drop-shadow(0px 50px 250px rgba(0, 0, 0, 0.247));
 }
 
 
@@ -35,7 +36,7 @@ body{
     background-color: #EDF2F7;
     width: 100%;
     margin-bottom: 16px;
-    border-bottom: 1px solid #667EEA;
+    padding: 5px;
 }
 
 .modal-input img{
@@ -69,7 +70,6 @@ body{
     width: 100%;
     height: 48px;
     margin-bottom: 16px;
-    
 }
 
 .modal-buttons button:first-child{
@@ -77,11 +77,29 @@ body{
     color: #fff;
     font-weight: 600;
     border: none;
+    border-radius: 50px;
+    transition: 0.4s;
+}
+
+.modal-buttons button:first-child:hover{
+    background: #470dc4 ;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
 }
 
 .modal-buttons button:last-child{
     background: transparent ;
     color: #4A5568;
+    font-weight: 600;
+    border: 1px solid #222222b0;
+    transition: 0.4s;
+}
+
+.modal-buttons button:last-child:hover{
+    background: #4A5568;
+    color: white;
     font-weight: 600;
     border: 1px solid #222222b0;
 }

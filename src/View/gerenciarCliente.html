@@ -2,212 +2,96 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/gerenciarCliente.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/gerenciarCliente.css">
+  <title>Document</title>
 </head>
 
 <body>
 
-    <header></header>
-    <main>
-        <div class="col-12 d-flex ">
-            <div class="sideMenu col-2">
-                <div class="nameAdm">
-                    <h3>Julio Cesar</h3>
-                </div>
-                <div class="actionClient">
-                    <h5>Clientes</h5>
-                    <button class="btnAction" onclick="htmlListar()">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <div class="iconList">
-                                <img src="./assets/iconList.svg" alt="">
-                            </div>
-                            <strong>Listar</strong>
-                        </div>
-                    </button>
-                    <button class="btnAction" onclick="htmlEditar()">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <div class="iconEdit">
-                                <img src="./assets/iconEdit.svg" alt="">
-                            </div>
-                            <strong>Editar</strong>
-                        </div>
-                    </button>
-                    <button class="btnAction">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <div class="iconDelete">
-                                <img src="./assets/iconDelete.svg" alt="">
-                            </div>
-                            <strong>Deletar</strong>
-                        </div>
-                    </button>
-                </div>
-                <div class="actionClient">
-                    <h5>Carros</h5>
-                    <button class="btnAction" onclick="htmlCliente()">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <div class="iconList">
-                                <img src="./assets/iconList.svg" alt="">
-                            </div>
-                            <strong>Listar</strong>
-                        </div>
-                    </button>
-                    <button class="btnAction">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <div class="iconEdit">
-                                <img src="./assets/iconEdit.svg" alt="">
-                            </div>
-                            <strong>Editar</strong>
-                        </div>
-                    </button>
-                    <button class="btnAction">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <div class="iconDelete">
-                                <img src="./assets/iconDelete.svg" alt="">
-                            </div>
-                            <strong>Deletar</strong>
-                        </div>
-                    </button>
-                </div>
-            </div>
-            <div class="renderConteudo col-10">
-                <div class='col-12' id="formSearch">
-                    <div class='menuPesquisa d-flex align-items-center'>
-                        <h4>Clientes</h4>
-                        <div class="menuPesquisaInput">
-                            <input class='form-input' type='text' id="inputSearch" placeholder="pesquisar"/>
-                            <button type='button' id="btnSearch" onclick="getAllUsers()">
-                                <div>
-                                    <img src="./assets/iconSend.svg" alt="">
-                                </div>
-                            </button>
-                        </div>
-                        <div class='col-2'>
-                            <select id="typeData" class='menuPesquisaSelect form-select' aria-label='Default select example'>
-                                <option value='id'>id</option>
-                                <option value='nome'>nome</option>
-                                <option value='email'>email</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>    
-                <div class="content">
-                  <form method="post" class="col-7">
-                    <input type="hidden" name="cad" value="cadastrar">
-                    <div class="form-row">
-                      <div class="col-md-6 mb-3">
-                        <label for="validationDefault01">Nome</label>
-                        <input type="text" onchange="validNameSobrenome()" name="nome" id="nome" class="form-control required"
-                          placeholder="Nome" required>
-                        <span class="validacao">Não ultilize números ou caracteres especias</span>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label for="validationDefault02">Sobrenome</label>
-                        <input type="text" onchange="validNameSobrenome()" name="sobrenome" class="form-control required"
-                          id="sobrenome" placeholder="Sobrenome" value="" required>
-                        <span class="validacao">Não ultilize números ou caracteres especias</span>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label for="validationDefaultUsername">Usuário</label>
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                          </div>
-                          <input type="text" class="form-control required" id="usuario" placeholder="Usuário"
-                            aria-describedby="inputGroupPrepend2" required>
-                        </div>
-                        <span class="validacao">Digite um usuario válido</span>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label for="validationDefaultPassword">Senha</label>
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupPrepend1">*</span>
-                          </div>
-                          <input type="password" onchange="validSenha()" name="senha" class="form-control required" id="senha"
-                            placeholder="Senha" aria-describedby="inputGroupPrepend1" required>
-                        </div>
-                        <span class="validacao">Minimo de 8 caracteres</span>
-                      </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="col-md-6 mb-3">
-                        <label for="validationDefault03">Cidade</label>
-                        <input type="text" onchange="validEstadoCidade()" name="cidade" class="form-control required" id="cidade"
-                          placeholder="Cidade" required>
-                        <span class="validacao">Digite o nome da sua cidade</span>
-                      </div>
-                      <div class="col-md-3 mb-3">
-                        <label for="validationDefault04">Estado</label>
-                        <input type="text" onchange="validEstadoCidade()" name="estado" class="form-control required" id="estado"
-                          placeholder="Estado" required>
-                        <span class="validacao">Digite o nome da sua Estado</span>
-                      </div>
-                      <div class="col-md-3 mb-3">
-                        <label for="validationDefault05">CEP</label>
-                        <input type="text" onchange="validCep()" name="cep" class="form-control required" id="cep" placeholder="CEP"
-                          required>
-                        <span class="validacao">Digite seu cep</span>
-                      </div>
-                      <div class="col-md-4 mb-3">
-                        <label for="validationDefault06"> Telefone</label>
-                        <input type="text" onchange="validTelefone()" name="telefone" class="form-control required" id="telefone"
-                          placeholder="Telefone" required>
-                        <span class="validacao">Digite seu telefone</span>
-                      </div>
-                      <div class="col-md-5 mb-3">
-                        <label for="validationDefault07">E-mail</label>
-                        <input type="text" onchange="validEmail()" name="email" class="form-control required" id="email"
-                          placeholder="E-mail" required>
-                        <span class="validacao">Digite um email válido</span>
-                      </div>
-                      <div class="col-md-3 mb-3">
-                        <label for="validationDefault08">Data de Nascimento</label>
-                        <input type="date" onchange="validData()" name="data" class="form-control required" id="data"
-                          placeholder="Aniversário" required>
-                        <span class="validacao">Deve ser maior de idade</span>
-                        <span class="validacaoData">Data invalida</span>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="form-check col-md-6 mb-3">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-                        <label class="form-check-label" for="invalidCheck2">
-                          Concordo com os termos e condições
-                        </label>
-                      </div>
-                      <img class="img-car"
-                        src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/96fdb578684029.5cac4a000cece.gif" alt="">
-                    </div>
-                    <div class="d-flex justify-content-center my-2">
-                      <span class="validacao">Preencha todos os campos corretamente</span>
-                    </div>
-                    <button class="btn-primary" type="button" onclick="enviar()">Enviar</button>
-                  </form>
-                </div>
-            </div>
+  <header></header>
+  <main>
+    <div class="col-12 d-flex ">
+      <div class="sideMenu col-2">
+        <div class="nameAdm">
+          <h3>Julio Cesar</h3>
         </div>
+        <div class="actionClient">
+          <h5>Clientes</h5>
+          <button class="btnAction" onclick="htmlListar()">
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="iconList">
+                <img src="./assets/iconList.svg" alt="">
+              </div>
+              <strong>Listar</strong>
+            </div>
+          </button>
+          <button class="btnAction" onclick="htmlEditar()">
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="iconEdit">
+                <img src="./assets/iconEdit.svg" alt="">
+              </div>
+              <strong>Editar</strong>
+            </div>
+          </button>
+          <button class="btnAction">
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="iconDelete">
+                <img src="./assets/iconDelete.svg" alt="">
+              </div>
+              <strong>Deletar</strong>
+            </div>
+          </button>
+        </div>
+        <div class="actionClient">
+          <h5>Carros</h5>
+          <button class="btnAction" onclick="htmlCliente()">
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="iconList">
+                <img src="./assets/iconList.svg" alt="">
+              </div>
+              <strong>Listar</strong>
+            </div>
+          </button>
+          <button class="btnAction">
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="iconEdit">
+                <img src="./assets/iconEdit.svg" alt="">
+              </div>
+              <strong>Editar</strong>
+            </div>
+          </button>
+          <button class="btnAction">
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="iconDelete">
+                <img src="./assets/iconDelete.svg" alt="">
+              </div>
+              <strong>Deletar</strong>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="renderConteudo col-10">
+      
+      </div>
+    </div>
 
-    </main>
-    <footer></footer>
-    <script defer src="./js/buscarCliente.js"></script>
-    <script type="module" defer src="./js/register.js"></script>
-    <script defer type="module" src="../components/htmlCliente.js"></script>
-    <script defer type="module" src="../components/validacao.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+  </main>
+  <footer></footer>
+  <script defer src="./js/buscarCliente.js"></script>
+  <script type="module" defer src="./js/register.js"></script>
+  <script defer type="module" src="../components/htmlCliente.js"></script>
+  <script defer type="module" src="../components/validacao.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 </body>
 
 </html>

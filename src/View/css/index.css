@@ -1,9 +1,26 @@
+/* SCROLL SUAVE */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d5c6c6;
+    border-radius: 20px;
+}
+
 /*Pardrão de tela inicial 1920x1080*/
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Sora, sans-serif;
+    font-family: nunito, sans-serif;
 }
 
 /*Remover _reboot.scss*/
@@ -18,13 +35,17 @@ ul {
 /*Remover _reboot.scss*/
 
 body {
-    background: #F8F6F7 !important;
+    background: #ffffff !important;
+    font-family: 'Nunito', sans-serif;
     
 }
 
 header {
-    background: white;
+    background-color: white;
+    filter: drop-shadow(0px 50px 250px rgba(0, 0, 0, 0.137));
 }
+
+
 
 /*Navbar*/
 .nav {
@@ -75,57 +96,135 @@ header {
     color: white;
     font-weight: 600;
     font-size: 12pt;
-
-    background: #550FED;
+    background-color: #550FED;
     border-radius: 9px;
 
 }
 
+
 .nav-ajuda p,
 .nav-contato p {
-    font-weight: 600;
+    font-weight: bold;
     margin-bottom: 0px;
 }
 
+
 /*main*/
 
-/*Section banner*/
-.banner {
+/*Sliders*/
+
+.slider {
+    overflow: hidden;
+    padding-top: 30px;
+    border-radius: 20px;
+}
+.slider-content {
+    width: 400%;
+    height: auto;
     display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.banner-img {
-    margin: 64px 0;
-    width: 1320px;
-}
-
-.banner-img img {
-    width: 100%;
-    height: 100%;
-}
-/*Section banner*/
-
-/*Section Algugel*/
-.aluguel-de-carro {
-    width: 100%;
-    background-color: #ffffff;
-    border-radius: 16px;
-    padding: 0 32px 32px 32px;
+    border-radius: 20px;
     
 }
 
+.slider-content input {
+    display: none;
+}
+
+.slide-box {
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s ease;
+
+}
+
+.slider img, svg {
+    border-radius: 20px;
+}
+
+.slider-box img{
+    width: 100%;
+   
+}
+
+.nav-manual, .nav-auto{
+    position: absolute;
+    width: 1274px;
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-manual .manual-btn, .nav-auto div {
+    border: 1px solid rgb(197, 197, 197);
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
+    margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover {
+    background-color: #8148fc;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1 {
+    background-color: #8148fc;
+}
+
+#radio2:checked ~ .nav-auto .auto-btn2 {
+    background-color: #8148fc;
+}
+
+#radio3:checked ~ .nav-auto .auto-btn3 {
+    background-color: #8148fc;
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+}
+
+
+/*Sliders*/
+
+/*Section Algugel*/
+
+.aluguel-box {
+    background-color: red;
+}
+
+.aluguel-de-carro {
+    margin-top: 60px;
+    width: 100%;
+    border-radius: 16px;
+
+}
+
 .aluguel-de-carro h2 {
-    padding: 32px 24px 0px 64px;
+    font-size: 40px;
     color: #414141;
-    font-weight: 600;
-    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.aluguel-de-carro p{
+    font-size: 20px;
 }
 
 .botao-grande,
 .botao-pequeno {
-    padding: 8px;
+    padding: 30px;
     background-color: #f8f6f8;
     border: none;
     border-radius: 9px;
@@ -134,7 +233,7 @@ header {
 }
 
 .botao-grande::placeholder, .botao-pequeno::placeholder{
-    font-size: small;
+    font-size: 20px;
 }
 
 .botao-grande {
@@ -154,18 +253,39 @@ header {
     height: 60px;
     border-radius: 9px;
     border: none;
-    background-color: #550FED;
+    background-color: #8148fc;
     color: #fff;
+    transition: 0.4s;
+}
+
+.botao-box2 button:hover {
+    width: 100%;
+    height: 60px;
+    border-radius: 9px;
+    border: none;
+    background-color: #6a3bcf;
+    color: #fff;
+    transition: 0.4s;
 }
 
 .botao-box,
 .botao-box2 {
-    padding-left: 64px;
+    justify-content: center;
+    width: 100%;
 }
-/*Section Algugel*/
+/*Section Aluguel*/
 
 
 /*Section Carros*/
+
+.bloco-principal a {
+    background-color: #8148fc;
+    padding: 20px 60px 20px 60px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.4s;
+}
+
 .principal {
    width: 100%;
    margin-left: 0px !important;
@@ -173,15 +293,32 @@ header {
 }
 
 .bloco-principal{
-    border: 1px solid rgb(236, 236, 236);
+    border: 1px solid #ffffff;
+    background-color: rgb(255, 255, 255);
+    width:100%;
+    height: 100%;
+    border-radius: 25px;
+    text-align: center;
+    transition: 1.4s;
+    filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.021));
+ 
+}
+
+.bloco-principal:hover{
+    border: 1px solid #eae6e6;
     background-color: rgb(255, 255, 255);
     width:100%;
     height: 100%;
     padding: 20px;
     border-radius: 25px;
     text-align: center;
+    filter: drop-shadow(20px 10px 20px rgba(0, 0, 0, 0.067));
+    transition: 0.3s;
  
 }
+
+
+
 
 #bloco2{
     margin: 0 32px;
@@ -209,14 +346,8 @@ header {
     font-weight: 400;
 }
 
-.bloco-principal button {
-    background-color: #550fed;
-    padding: 15px 50px;
-    border: none;
-    border-radius: 50px;
-    margin-bottom: 16px;
 
-}
+
 
 .bloco-principal a {
     color: white;
@@ -234,10 +365,15 @@ h3 {
 /*Section Informações*/
 .informacao {
     display: flex;
-    width: 100%;
-    margin-top: 60px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.informacao-box {
+    background-color: #fcf8f8;
+    padding: 50px 0 50px 0;
+    margin: 50px 0 50px 0;
 }
 
 .quem-somos {
@@ -245,10 +381,22 @@ h3 {
     width: 100%;
     background: #FFFFFF;
     border-radius: 24px;
+    filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.067));
+    transition: 1s;
+}
+
+.quem-somos:hover {
+    display: flex;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 24px;
+    filter: drop-shadow(20px 10px 20px rgba(0, 0, 0, 0.067));
+    transition: 0.3s;
 }
 
 .quem-somos-card{
     display: flex;
+    padding: 30px;
 }
 
 #personagem2 {
@@ -273,15 +421,16 @@ h3 {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    
   
 }
 
 .infotexto h2 {
     display: flex;
     align-items: center;
-    font-family: 'Sora';
+    font-family: 'nunito';
     font-style: normal;
-    font-weight: 600;
+    font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     letter-spacing: -0.04em;
@@ -291,19 +440,19 @@ h3 {
 }
 
 .infotexto p {
-    font-family: 'Sora';
+    font-family: 'nunito';
     font-style: normal;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 21px;
     letter-spacing: -0.04em;
     color: #404040;
-    height: 180px;
+    height: 150px;
     min-width: 70%;
 }
 
 .infotexto h3 {
-    font-family: 'Sora';
+    font-family: 'nunito';
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -315,9 +464,9 @@ h3 {
 
 .ajuda-container {
     display: flex;
-    background: #550FED;
-    border-radius: 36px;
-    height: 190px;
+    background-color: #550FED;
+    border-radius: 15px;
+    height: 186px;
     width: 100%;
     margin-top: 60px;
 }
@@ -327,9 +476,9 @@ h3 {
 }
 
 .ajuda-card h2 {
-    font-family: 'Sora';
+    font-family: 'nunito';
     font-style: normal;
-    font-weight: 600;
+    font-weight: bold;
     font-size: 23px;
     line-height: 29px;
     letter-spacing: -0.04em;
@@ -338,7 +487,7 @@ h3 {
 }
 
 .ajuda-card p {
-    font-family: 'Sora';
+    font-family: 'nunito';
     font-style: normal;
     font-weight: 400;
     font-size: 19px;
@@ -349,9 +498,9 @@ h3 {
 }
 
 .ajuda-card h3 {
-    font-family: 'Sora';
+    font-family: 'nunito';
     font-style: normal;
-    font-weight: 600;
+    font-weight: bold;
     font-size: 19px;
     line-height: 24px;
     letter-spacing: -0.04em;
@@ -367,33 +516,209 @@ h3 {
 /*Section Informações*/
 
 
-/*Footer*/
-.footer{
-    width: 70% !important;
-    margin-top: 64px;
-}
-.footer-links{
-    margin-bottom: 16px;
+/* OFERTAS EXCLUSIVAS */
+
+.oferta img {
+    width: 150px;
+    margin-right: 50px;
 }
 
-.footer-links h5{
-    
-    margin: 0 32px;
-   
+.oferta h1 {
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
 }
-.footer-links h5 a{
-    text-decoration: none;
+
+.oferta {
+    padding: 50px;
+    border-radius: 20px;
+}
+
+
+.oferta form {
+    width: 100%;
+}
+
+
+
+.oferta input {
+    background-color: #f5eeee;
+    width: 500px;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.btn-oferta {
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #9bf90c;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 50px;
+    transition: 0.4s;
+}
+
+.btn-oferta:hover {
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #89da0f;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 50px;
+}
+
+.oferta ::placeholder {
+   font-size: 20px;
+}
+
+/* ACORDEAO */
+
+
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 17px;
+    transition: 0.4s;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: 0.7s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #550FED;
+    color: white;
+    transition: 0.8s;
+  }
+  
+  .panel {
+    padding: 30px 20px 10px 20px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+
+
+/*  Perguntas Frequentes */
+
+.pergunta-box{
+    padding: 60px 0 60px 0;
+    margin: 50px 0 0px 0;
+}
+
+.pergunta-box h2 {
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+
+/*Footer*/
+
+.footer-box {
+    padding-top: 70px;
+    background-color: #fcf8f8;
+}
+
+.footer-text{
+    font-size: 13px;
+}
+
+footer h1 {
+    color: #404040;
+    font-size: 18px;
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+
+footer h1:hover{
+    font-size: 18px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    cursor: pointer;
     color: #000000;
 }
-.footer-info p{
-    font-size: 9pt;
-    width: 75%;
+
+footer p {
+    color: #404040;
+    font-size: 20px;
+    padding-bottom: 10px;
 }
 
-/*Footer*/
+
+.pag {
+    padding-top: 25px;
+}
+
+.pag h1 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.pag h1:hover {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.pag p {
+    font-size: 15px;
+}
+
+.pag img {
+    width: 55px;
+    padding: 7px;
+    transition: 0.4s;
+}
+
+.pag img:hover {
+    border-radius: 5px;
+    background-color: #00000012;
+    width: 55px;
+    padding: 7px;
+    transition: 0.4s;
+}
+
+/*Whatsapp*/
 
 
-
+.icon {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    font-size: 30px;
+    background-color: #01e675;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 5px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    text-decoration: none;
+    z-index: 100;
+  }
+  
+  .icon .fab{
+    padding-top: 9px;
+  }
+  
+  .icon:hover{
+    background-color: #fff;
+    color: #029e3b;
+    font-weight: 900;
+    box-shadow: 2px 2px 20px #5fe690;
+    transition: 0.3s;
+  }
 
 
 
@@ -420,8 +745,7 @@ h3 {
         width: 100%;
         margin: 0 !important;
     }
-    .nav-menu{
-    }
+   
     .nav-mobile-button{
         
         height: 40px;
@@ -521,6 +845,7 @@ h3 {
 
     .quem-somos{
         margin-bottom: 16px;
+        
     }
 
     .ajuda-card{
@@ -530,6 +855,8 @@ h3 {
     .ajuda-card h2{
         margin-top: 30px;
     }
+
+ 
 
     .footer{
         width: 100% !important;
