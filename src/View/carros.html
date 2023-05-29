@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/carros.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    <title>Locadrive</title>
+</head>
+
+<body>
+    <!--NAV BAR-->
+
+    <header class="">
+        <nav class="nav container">
+            <ul class="nav-options row">
+                <div class="nav-logo col-xxl-6 col-xl-6 col-lg-6 col-6">
+                    <li>
+                        <img src="./assets/logo.svg" alt="" style="height: 60px; width: 180px;">
+                    </li>
+                </div>
+                <div class="mobile col-6">
+                    <div class="nav-mobile col-12">
+                        <div class="d-flex justify-content-end">
+                            <button class="nav-mobile-button" onclick="showMenu()">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="nav-mobile-menu d-flex flex-column">
+                            <div class="d-flex justify-content-end">
+                                <button class="nav-menu-close" onclick="closeMenu()">
+                                    <img src="./assets/fechar.png" alt="">
+                                </button>
+                            </div>
+                            <a href="./login.html">
+                                <li>
+                                    <p>Login</p>
+                                </li>
+                            </a>
+                            <a href="./register.html">
+                                <li>
+                                    <p>Crie sua conta</p>
+                                </li>
+                            </a>
+                            <a href="">
+                                <li class="">
+                                    <p>Contato</p>
+                                </li>
+                            </a>
+                            <a href="">
+                                <li class="">
+                                    <p>Ajuda</p>
+                                </li>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-buttons col-xxl-6 col-xl-6 col-lg-6">
+                    <li class="nav-contato">
+                        <img src="./assets/icon-phone.svg" alt="" style="padding-right: 16px ;">
+                        <p>Contato</p>
+                    </li>
+                    <li class="nav-ajuda">
+                        <img src="./assets/icon-help.svg" alt="" style="padding-right: 16px ;">
+                        <p>Ajuda</p>
+                    </li>
+                    <li class="nav-button">
+                        <a href="./login.html"><button>Entrar</button></a>
+                    </li>
+                </div>
+            </ul>
+
+        </nav>
+        <!--NAV BAR-->
+    </header>
+    <!--TITULO-->
+    <main>
+        <div class="titulo">
+            <h1 id="classe-car">HATCH</h1>
+            <h2>Escolha seu veiculo</h2>
+            <p>As melhores condicoes para voce reservar e aproveitar</p>
+        </div>
+        <section class="container d-flex">
+            <div class="col-4">
+                <div class="box-pag main-box">
+                    <div class="text-box">
+                        <h3>Filtro</h3>
+                    </div>
+                    <div class="option">
+                        <div class="box-option">
+                            <a href="carros-suv.html" target="_self" rel="internal">
+                                <div class="btn-box">
+
+                                </div>
+                            </a>
+                        </div>
+                        <p>SUV</p>
+                    </div>
+                    <div class="option">
+                        <div class="box-option">
+                            <a href="carros-sedan.html" target="_self" rel="internal">
+                                <div class="btn-box">
+
+                                </div>
+                            </a>
+                        </div>
+                        <p>SEDAN</p>
+                    </div>
+                    <div class="option">
+                        <div class="box-option">
+                            <a href="carros-hatch.html" target="_self" rel="internal">
+                                <div class="btn-box">
+
+                                </div>
+                            </a>
+                        </div>
+                        <p>HATCH</p>
+                    </div>
+                </div>
+            </div>
+            <!--FIM DO TITULO-->
+            <!--INICIO DOS CARROS-->
+            <div class="col-8">
+                <div class="d-flex col flex-column">
+                    <div class="espaco col-8 d-flex">
+
+                        <!-- CARD 1 -->
+                        <div
+                            class="div-card d-flex col-9 flex-column justify-content-center aling-items-center text-center">
+                            <div class="cards-car">
+                                <img class="img-car" src="assets/hatch-argo.png" alt="">
+                                <h1>Argo</h1>
+                                <p class="descricao-car">Fiat Argo 1.0, Hyundai HB20 1.0, GM Onix LT 1.0 ou similar...</p>
+                                <p class="texo-card">Sua reserva garante um dos carros desse grupo.
+                                    Modelo sujeito à disponibilidade da agência.</p>
+                                <div class="preco">
+                                    <p>A partir de:</p>
+                                    <p><span>R$187,70</span>
+                                    </p>
+                                    <p>*Proteções e taxa de aluguel (12%)<br> não inclusas neste valor.</p>
+                                </div>
+                                <button class="but-card">Reserve Agora</button>
+                            </div>
+                        </div>
+                        <!-- CARD 2 -->
+                        <div
+                            class="div-card d-flex col-9 flex-column justify-content-center aling-items-center text-center">
+                            <div class="cards-car">
+                                <img class="img-car" src="assets/hatch-fordk.png" alt="">
+                                <h1>Ford K</h1>
+                                <p class="descricao-car">Fiat Argo 1.0, Hyundai HB20 1.0, GM Onix LT 1.0 ou similar...</p>
+                                <p class="texo-card">Sua reserva garante um dos carros desse grupo.
+                                    Modelo sujeito à disponibilidade da agência.</p>
+                                <div class="preco">
+                                    <p>A partir de:</p>
+                                    <p><span>R$187,70</span>
+                                    </p>
+                                    <p>*Proteções e taxa de aluguel (12%)<br>não inclusas neste valor.</p>
+                                </div>
+                                <button class="but-card">Reserve Agora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="espaco col-8 d-flex">
+
+                    <!-- CARD 3 -->
+                    <div
+                        class="div-card d-flex col-9 flex-column justify-content-center aling-items-center text-center">
+                        <div class="cards-car">
+                            <img class="img-car" src="assets/hatch.png" alt="">
+                            <h1>Kwid</h1>
+                            <p class="descricao-car">Fiat Argo 1.0, Hyundai HB20 1.0, GM Onix LT 1.0 ou similar...</p>
+                            <p class="texo-card">Sua reserva garante um dos carros desse grupo.
+                                Modelo sujeito à disponibilidade da agência.</p>
+                            <div class="preco">
+                                <p>A partir de:</p>
+                                <p><span>R$187,70</span>
+                                </p>
+                                <p>*Proteções e taxa de aluguel (12%)<br>não inclusas neste valor.</p>
+                            </div>
+                            <button class="but-card">Reserve Agora</button>
+                        </div>
+                    </div>
+                    <!-- CARD 4 -->
+                    <div
+                        class="div-card d-flex col-9 flex-column justify-content-center aling-items-center text-center">
+                        <div class="cards-car">
+                            <img class="img-car" src="assets/hatch-onix.png" alt="">
+                            <h1>Onix</h1>
+                            <p class="descricao-car">Fiat Argo 1.0, Hyundai HB20 1.0, GM Onix LT 1.0 ou similar...</p>
+                            <p class="texo-card">Sua reserva garante um dos carros desse grupo.
+                                Modelo sujeito à disponibilidade da agência.</p>
+                            <div class="preco">
+                                <p>A partir de:</p>
+                                <p><span>R$187,70</span>
+                                </p>
+                                <p>*Proteções e taxa de aluguel (12%)<br>não inclusas neste valor.</p>
+                            </div>
+                            <button class="but-card">Reserve Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="espaco col-8 d-flex">
+
+                    <!-- CARD 5 -->
+                    <div
+                        class="div-card d-flex col-9 flex-column justify-content-center aling-items-center text-center">
+                        <div class="cards-car">
+                            <img class="img-car" src="assets/hatch-polo.png" alt="">
+                            <h1>Polo</h1>
+                            <p class="descricao-car">Fiat Argo 1.0, Hyundai HB20 1.0, GM Onix LT 1.0 ou similar...</p>
+                            <p class="texo-card">Sua reserva garante um dos carros desse grupo.
+                                Modelo sujeito à disponibilidade da agência.</p>
+                            <div class="preco">
+                                <p>A partir de:</p>
+                                <p><span>R$187,70</span>
+                                </p>
+                                <p>*Proteções e taxa de aluguel (12%)<br>não inclusas neste valor.</p>
+                            </div>
+                            <button class="but-card">Reserve Agora</button>
+                        </div>
+                    </div>
+                    <!-- CARD 6 -->
+                    <div
+                        class="div-card d-flex col-9 flex-column justify-content-center aling-items-center text-center">
+                        <div class="cards-car">
+                            <img class="img-car" src="assets/hatch-sandeiro.png" alt="">
+                            <h1>Sandeiro</h1>
+                            <p class="descricao-car">Toyota Corolla 2.0, GM Cruze 1.4 Turbo, Chery Arrizo 6 1.5 Turbo ou similar*</p>
+                            <p class="texo-card">Sua reserva garante um dos carros desse grupo.
+                                Modelo sujeito à disponibilidade da agência.</p>
+                            <div class="preco">
+                                <p>A partir de:</p>
+                                <p><span>R$187,70</span>
+                                </p>
+                                <p>*Proteções e taxa de aluguel (12%)<br>não inclusas neste valor.</p>
+                            </div>
+                            <button class="but-card">Reserve Agora</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--FIM DOS CARROS-->
+    <!--FOOTER-->
+    <div class="footer-box">
+        <footer class="footer container d-flex flex-column">
+            <div class="d-flex container">
+                <div class="col"><img src="assets/logo.svg" alt="">
+                </div>
+                <div class="col pe-5">
+                    <p class="fw-bold">Somos LocaDrive</p>
+                    <h1>Ajuda</h1>
+                    <h1>Configurações de Privacidade</h1>
+                    <h1>Entrar</h1>
+                </div>
+                <div class="col pe-5">
+                    <p class="fw-bold">Informações Importantes</p>
+                    <h1>Política de Cookies</h1>
+                    <h1>Política de Privacidade</h1>
+                    <h1>Termos de Serviço</h1>
+                    <h1>Dados da Empresa</h1>
+                </div>
+                <div class="col">
+                    <p class="fw-bold">Promova seu negócio</p>
+                    <h1>Explorar</h1>
+                    <h1>Empresa</h1>
+                    <h1>Parceiros</h1>
+                    <h1>Viagens</h1>
+                </div>
+            </div>
+            <div class="container justify-content-center d-flex flex-column align-items-center pag">
+                <h1>formas de pagamento</h1>
+                <p>Pague no cartão de crédito em até 12X com juros, boleto à vista ou parcelado, transferência bancária
+                    ou com pix!</p>
+                <div>
+                    <img src="assets/cartao/mastercard.webp" alt="">
+                    <img src="assets/cartao/amex.webp" alt="">
+                    <img src="assets/cartao/sorocred.webp" alt="">
+                    <img src="assets/cartao/diners.webp" alt="">
+                    <img src="assets/cartao/hipercard.webp" alt="">
+                    <img src="assets/cartao/elo.webp" alt="">
+                    <img src="assets/cartao/credz.webp" alt="">
+                    <img src="assets/cartao/hiper.webp" alt="">
+                    <img src="assets/cartao/sorocred-1.webp" alt="">
+                    <img src="assets/cartao/itau.webp" alt="">
+                    <img src="assets/cartao/bradesco.webp" alt="">
+                    <img src="assets/cartao/santander.webp" alt="">
+                    <img src="assets/cartao/bb.webp" alt="">
+                    <img src="assets/cartao/banrisul.webp" alt="">
+                    <img src="assets/cartao/caixa.webp" alt="">
+                    <img src="assets/cartao/safetyPay.webp" alt="">
+                    <img src="assets/cartao/jcb.webp" alt="">
+                    <img src="assets/cartao/discover.webp" alt="">
+                    <img src="assets/cartao/aura.webp" alt="">
+                    <img src="assets/cartao/pix.webp" alt="">
+                </div>
+            </div>
+            <div class="text-center py-5 social">
+                <div class="fs-4 py-4">
+                    <h1 class="fw-bold">siga-nos!</h1>
+                    <i class="fa-brands fa-square-facebook" style="color: #383333;"></i>
+                    <i class="fa-brands fa-twitter px-3" style="color: #383333;"></i>
+                    <i class="fa-brands fa-instagram" style="color: #383333;"></i>
+                </div>
+                <p class="footer-text"> © 2023 LOCADRIVE. TODOS OS DIREITOS RESERVADOS.
+                </p>
+            </div>
+        </footer>
+        <!--FOOTER-->
+</body>
+
+</html>
