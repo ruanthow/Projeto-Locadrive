@@ -1,4 +1,4 @@
-import {paramsCampos} from "http://localhost/Projeto-Locadrive/src/components/validacao.js";
+import {paramsCampos} from "/Projeto-Locadrive/src/components/validacao.js";
 
 paramsCampos(".required", ".validacao", ".validacaoData");
 

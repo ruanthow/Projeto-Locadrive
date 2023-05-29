@@ -1,4 +1,5 @@
-import {receberValores} from 'http://localhost/Projeto-Locadrive/src/View/js/register.js';
+import { receberValores } from '/Projeto-Locadrive/src/View/js/register.js';
+import { updateCliente } from '/Projeto-Locadrive/src/View/js/updateCliente.js';
 
 // let campos = document.querySelectorAll(".required"); 
 // let msgErro = document.querySelectorAll(".validacao"); 
@@ -23,7 +24,7 @@ let campos;// pegar todos os campos do form
 let msgErro;// pegar todos os spans com msg de erro
 let msgErroData;// span unico para erro de compatibilidade do compo data
 
-export function paramsCampos(classInputsFormulario,spanErros,spanErroData){
+export function paramsCampos(classInputsFormulario, spanErros, spanErroData) {
     campos = document.querySelectorAll(classInputsFormulario);
     msgErro = document.querySelectorAll(spanErros);
     msgErroData = document.querySelector(spanErroData);
@@ -222,10 +223,11 @@ window.validData = function () {
 
 
 
-window.enviar =  function () {
+window.enviar = function () {
+
     usuarioValid = campos[2].value;
     let dados = {
-        
+
         nomeValid: nomeValid,
         sobrenomeValid: sobrenomeValid,
         usuarioValid: usuarioValid,
@@ -243,9 +245,39 @@ window.enviar =  function () {
     if (nomeValid != "" && sobrenomeValid != "" && usuarioValid != "" && senhaValid != "" && cidadeValid != "" && estadoValid != "" && cepValid != "" && telefoneValid != 0 && emailValid != "" && dataValid != "") {
         receberValores(dados);
         msgErro[10].style.display = "none";
-    
+
     }
     else {
         msgErro[10].style.display = "block";
     }
 }
+
+window.updateCliente = function (){
+    let inputSearch = document.querySelector("#inputSearch");
+   
+    let dados = {
+        _method: "PUT",
+        id:inputSearch.value,
+        nomeValid: campos[0].value,
+        sobrenomeValid: campos[1].value,
+        usuarioValid: campos[2].value,
+        senhaValid: campos[3].value,
+        cidadeValid: campos[4].value,
+        estadoValid: campos[5].value,
+        cepValid: campos[6].value,
+        telefoneValid: campos[7].value,
+        emailValid: campos[8].value,
+        dataValid: campos[9].value
+
+    }
+
+    if (campos[0].value != "" && campos[1].value != "" && campos[2].value != "" && campos[3].value != "" && campos[4].value != "" && campos[5].value != "" && campos[6].value != "" && campos[7].value != 0 && campos[8].value != "" && campos[9].value != "") {
+        updateCliente(dados);
+        msgErro[10].style.display = "none";
+
+    }
+    else {
+        msgErro[10].style.display = "block";
+    }
+}
+

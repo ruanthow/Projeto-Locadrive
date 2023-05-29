@@ -1,3 +1,17 @@
+<?php 
+session_start();
+    var_dump($_SESSION);
+    if(isset($_SESSION['user'])){
+        session_start();
+        $user = $_SESSION;
+        var_dump($user);
+    }
+    else{
+        $user = NULL;
+    }
+  
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -48,7 +62,7 @@
                                     <img src="./assets/fechar.png" alt="">
                                 </button>
                             </div>
-                            <a href="./login.html">
+                            <a href="./login.php">
                                 <li>
                                     <p>Login</p>
                                 </li>
@@ -81,7 +95,7 @@
                         <p>Ajuda</p>
                     </li>
                     <li class="nav-button">
-                        <a href="./login.html"><button>Entrar</button></a>
+                        <a href="./login.php"><button><?= $user != NULL ? $user['usuario'] : 'Entrar' ?></button></a>
                     </li>
                 </div>
             </ul>

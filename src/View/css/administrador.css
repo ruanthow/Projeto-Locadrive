@@ -1,0 +1,10 @@
+.sideMenu{
+
+    background: purple;
+    height: 100vh;
+}
+
+.mainContent{
+    background: #333;
+    height: 100vh;
+}

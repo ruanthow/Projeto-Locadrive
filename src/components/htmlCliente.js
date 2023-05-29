@@ -1,7 +1,7 @@
 import {paramsCampos} from "http://localhost/Projeto-Locadrive/src/components/validacao.js";
 
 let renderConteudo = document.querySelector(".renderConteudo");
-let teste = document.querySelector("#teste");
+
 
 window.htmlListar = function (){
     return (
@@ -67,7 +67,7 @@ window.htmlEditar = function (){
       <h4>Clientes</h4>
       <div class="menuPesquisaInput">
         <input class='form-input' type='text' id="inputSearch" placeholder="Pesquisar" />
-        <button type='button' id="btnSearch" onclick="getAllUsers()">
+        <button type='button' id="btnSearch" onclick="getUserFromUpdate()">
           <div>
             <img src="./assets/Arrow - Left.svg" alt="">
           </div>
@@ -168,7 +168,7 @@ window.htmlEditar = function (){
           </div>
       </div>
       <div class="form-group">
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center my-4">
           <input class="form-check-input mx-2" type="checkbox" value="" id="invalidCheck2" required>
           <label class="form-check-label" for="invalidCheck2">
             Concordo com os termos e condições
@@ -176,7 +176,7 @@ window.htmlEditar = function (){
         </div>
       </div>
       <div class="d-flex justify-content-center my-2">
-        <button class="btn-primary" type="button" onclick="enviar()">Enviar</button>
+        <button class="btn-primary" type="button" onclick="updateCliente()">Atualizar</button>
       </div>
       <div class="d-flex justify-content-center my-2">
         <span class="validacao">Preencha todos os campos corretamente</span>

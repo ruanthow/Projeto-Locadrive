@@ -2,7 +2,7 @@
 
     include $_SERVER['DOCUMENT_ROOT'] ."/Projeto-Locadrive/src/config/conexao.php";
     include $_SERVER['DOCUMENT_ROOT'] ."/Projeto-Locadrive/src/Model/Cliente.php";
-    
+
     if(isset($_POST['valor']) and isset($_POST['fieldName'])){
         if($_POST['valor'] != ""){
             getUser($_POST['valor'], $_POST['fieldName']);
@@ -12,7 +12,11 @@
             getUsers();
         }
     }
-    
+    elseif(isset($_POST['valorOfUpdate'])  and isset($_POST['optionOfUpdate']) ){
+        getUser($_POST['valorOfUpdate'], $_POST['optionOfUpdate']);
+    }
+
+
     function getUsers(){
         global $connect;
         $sql = $connect->prepare("SELECT * FROM cliente");

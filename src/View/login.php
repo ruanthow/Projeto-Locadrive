@@ -1,3 +1,11 @@
+<?php 
+        
+        if(isset($_COOKIE['PHPSESSID'])){
+            header("Refresh:0; url=page2.php");
+            header("Location: http://localhost/Projeto-Locadrive/src/View/index.php");
+        }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -25,16 +33,16 @@
                 <div class="modal-inputs col-xxl-12 col-lg-12">
                     <div class="modal-input">
                         <img src="./assets/user-login.svg" alt="icon user login">
-                        <input type="email" placeholder="example@hotmail.com">
+                        <input type="email" placeholder="example@hotmail.com" id="email">
                     </div>
                     <div class="modal-input">
                         <img src="./assets/key-login.svg" alt="icon user password">
-                        <input type="password" placeholder="senha">
+                        <input type="password" placeholder="senha" id="senha">
                     </div>
                 </div>
                 <p>Esqueci a minha senha. Clique aqui para redefinir</p>
                 <div class="modal-buttons col-xxl-12 col-lg-12">
-                    <button>Login</button>
+                    <button onclick="logar()">Login</button>
                     <a href="./register.html"><button>Registrar nova conta</button></a>
                 </div>
             </div>
@@ -42,6 +50,8 @@
 
     </main>
     <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 
 </html>
