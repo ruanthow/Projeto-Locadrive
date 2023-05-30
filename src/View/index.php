@@ -1,6 +1,15 @@
 <?php 
-
-    
+session_start();
+    var_dump($_SESSION);
+    if(isset($_SESSION['user'])){
+        session_start();
+        $user = $_SESSION;
+        var_dump($user);
+    }
+    else{
+        $user = NULL;
+    }
+  
 ?>
 
 <!DOCTYPE html>
