@@ -1,13 +1,14 @@
 <?php 
 session_start();
-    var_dump($_SESSION);
     if(isset($_SESSION['user'])){
-        session_start();
-        $user = $_SESSION;
-        var_dump($user);
+        $user = $_SESSION['user'];
+        
     }
     else{
         $user = NULL;
+        
+        unset($_COOKIE['PHPSESSID']);
+        setcookie('PHPSESSID', null, -1, '/');
     }
   
 ?>
@@ -476,7 +477,6 @@ session_start();
                 class="fab fa-whatsapp"></i></a>
     </div>
 
-    <script src="https://kit.fontawesome.com/b06b4f71c3.js" crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
 </body>
 

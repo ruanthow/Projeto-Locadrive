@@ -1,6 +1,6 @@
 let email = document.getElementById("email");
 let senha = document.getElementById("senha");
-
+let msgErro = document.querySelector(".msgErro");
 
 function logar() {
 
@@ -17,8 +17,13 @@ function logar() {
         data: dados,
         datatype: 'json'
     }).done((data)=>{
-        console.log(data);
-        
+        if(data == "logado"){
+            window.location.href = "http://localhost/Projeto-Locadrive/src/View/index.php";
+            msgErro.style.display = "none"
+        }
+        else{
+            msgErro.style.display = "flex"
+        }
     }).fail((jqXHR, textStatus, errorThrown) => {
         console.log(errorThrown);
     })

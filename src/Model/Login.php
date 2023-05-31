@@ -33,7 +33,7 @@
             ini_set("session.cookie_lifetime", $timeout);
 
             //Start a new session
-             session_start();
+            session_start();
 
             //Set the default session name
             $this->s_name = session_name();

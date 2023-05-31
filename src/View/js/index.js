@@ -1,6 +1,7 @@
 let btnLogin = document.getElementById("login");
 var navMobile = document.querySelector(".nav-mobile-menu");
 
+
 function openModal(){
    console.log("abriu");
 }
@@ -11,6 +12,8 @@ function closeMenu(){
 
 function showMenu(){
    navMobile.style.width = "100%"
+
+
 }
 
 /*SCROLL SUAVE */
