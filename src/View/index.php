@@ -1,16 +1,14 @@
-<?php 
+<?php
 session_start();
-    if(isset($_SESSION['user'])){
-        $user = $_SESSION['user'];
-        
-    }
-    else{
-        $user = NULL;
-        
-        unset($_COOKIE['PHPSESSID']);
-        setcookie('PHPSESSID', null, -1, '/');
-    }
-  
+if (isset($_SESSION['user'])) {
+    $user = $_SESSION['user'];
+} else {
+    $user = NULL;
+
+    unset($_COOKIE['PHPSESSID']);
+    setcookie('PHPSESSID', null, -1, '/');
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -26,10 +24,8 @@ session_start();
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
@@ -44,9 +40,11 @@ session_start();
         <nav class="nav container">
             <ul class="nav-options row">
                 <div class="nav-logo col-xxl-6 col-xl-6 col-lg-6 col-6">
+                    <a href="">
                     <li>
                         <img src="./assets/logo.svg" alt="" style="height: 60px; width: 180px;">
                     </li>
+                    </a>
                 </div>
                 <div class="mobile col-6">
                     <div class="nav-mobile col-12">
@@ -124,22 +122,22 @@ session_start();
                 <div class="slide-box">
                     <img src="assets/banner3.webp" alt="slide 1">
                 </div>
-            
 
-            <div class="nav-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
+
+                <div class="nav-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+
+                <div class="nav-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+
             </div>
 
-            <div class="nav-manual">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-            </div>
-
-        </div>
-           
 
         </section>
 
@@ -282,7 +280,7 @@ session_start();
         </section>
     </div>
 
-    
+
     <section class="container-fluid d-flex flex-column pergunta-box justify-content-center align-items-center">
         <div class="col-8 d-flex flex-column">
             <h2 class="text-center">DÚVIDAS FREQUENTES</h2>
@@ -383,47 +381,43 @@ session_start();
             </div>
     </section>
 
-    
+
     <!-- OFERTAS EXCLUSIVAS -->
-    <div class="oferta-box">
-        <section class="d-flex container justify-content-center align-items-center">
-            <div class="oferta-box">
-                <h1>INSCREVA-SE PARA RECEBER <b>OFERTAS EXCLUSIVAS</b></h1>
-                
-            </div>
-            <div class="oferta">
-                
-                <form action="">
-    
-                    <input type="text" id="nome" placeholder="Nome" />
-                    <input type="text" id="nome" placeholder="Digite seu e-mail" />
-                    <button class="btn-oferta">Eu Quero</button>
-                </form>
-            </div>
-    
-        </section>
-    
-    </div>
+    <section class="section-oferta col-12 col-lg-10 col-xl-10 col-xxl-10 d-flex container justify-content-center align-items-center">
+        <div class="oferta-box col-11 col-lg-6 col-xl-6 col-xxl-6">
+            <h1>INSCREVA-SE PARA RECEBER <b>OFERTAS EXCLUSIVAS</b></h1>
+
+        </div>
+        <div class="oferta col-11 col-lg-6 col-xl-6 col-xxl-6">
+            <form action="">
+                <input type="text" id="nome" placeholder="Nome" style="width: 100%;" />
+                <input type="text" id="nome" placeholder="Digite seu e-mail" style="width: 100%;" />
+                <button class="btn-oferta">Eu Quero</button>
+            </form>
+        </div>
+
+    </section>
 
     <div class="footer-box">
         <footer class="footer container d-flex flex-column">
             <div class="d-flex container">
-                <div class="col"><img src="assets/logo.svg" alt="">
+                <div class="footer-logo col">
+                    <img src="assets/logo.svg" alt="">
                 </div>
-                <div class="col pe-5">
+                <div class="footer-infos col pe-5">
                     <p class="fw-bold">Somos LocaDrive</p>
                     <h1>Ajuda</h1>
                     <h1>Configurações de Privacidade</h1>
                     <h1>Entrar</h1>
                 </div>
-                <div class="col pe-5">
+                <div class="footer-infos col pe-5">
                     <p class="fw-bold">Informações Importantes</p>
                     <h1>Política de Cookies</h1>
                     <h1>Política de Privacidade</h1>
                     <h1>Termos de Serviço</h1>
                     <h1>Dados da Empresa</h1>
                 </div>
-                <div class="col">
+                <div class="footer-infos col">
                     <p class="fw-bold">Promova seu negócio</p>
                     <h1>Explorar</h1>
                     <h1>Empresa</h1>
@@ -435,34 +429,46 @@ session_start();
                 <h1>formas de pagamento</h1>
                 <p>Pague no cartão de crédito em até 12X com juros, boleto à vista ou parcelado, transferência bancária
                     ou com pix!</p>
-                <div>
-                    <img src="assets/cartao/mastercard.webp" alt="">
-                    <img src="assets/cartao/amex.webp" alt="">
-                    <img src="assets/cartao/sorocred.webp" alt="">
-                    <img src="assets/cartao/diners.webp" alt="">
-                    <img src="assets/cartao/hipercard.webp" alt="">
-                    <img src="assets/cartao/elo.webp" alt="">
-                    <img src="assets/cartao/credz.webp" alt="">
-                    <img src="assets/cartao/hiper.webp" alt="">
-                    <img src="assets/cartao/sorocred-1.webp" alt="">
-                    <img src="assets/cartao/itau.webp" alt="">
-                    <img src="assets/cartao/bradesco.webp" alt="">
-                    <img src="assets/cartao/santander.webp" alt="">
-                    <img src="assets/cartao/bb.webp" alt="">
-                    <img src="assets/cartao/banrisul.webp" alt="">
-                    <img src="assets/cartao/caixa.webp" alt="">
-                    <img src="assets/cartao/safetyPay.webp" alt="">
-                    <img src="assets/cartao/jcb.webp" alt="">
-                    <img src="assets/cartao/discover.webp" alt="">
-                    <img src="assets/cartao/aura.webp" alt="">
-                    <img src="assets/cartao/pix.webp" alt="">
+                <div class="footer-parceiros d-flex col-12 justify-content-center">
+                    <div class="footer-parceiros-logos">
+                        <img src="assets/cartao/mastercard.webp" alt="">
+                        <img src="assets/cartao/amex.webp" alt="">
+                        <img src="assets/cartao/sorocred.webp" alt="">
+                        <img src="assets/cartao/diners.webp" alt="">
+                        <img src="assets/cartao/hipercard.webp" alt="">
+                        <img src="assets/cartao/elo.webp" alt="">
+                    </div>
+                    <div class="footer-parceiros-logos">
+                        <img src="assets/cartao/credz.webp" alt="">
+                        <img src="assets/cartao/hiper.webp" alt="">
+                        <img src="assets/cartao/sorocred-1.webp" alt="">
+                        <img src="assets/cartao/itau.webp" alt="">
+                        <img src="assets/cartao/bradesco.webp" alt="">
+                        <img src="assets/cartao/santander.webp" alt="">
+                    </div>
+                    <div class="footer-parceiros-logos">
+                        <img src="assets/cartao/bb.webp" alt="">
+                        <img src="assets/cartao/banrisul.webp" alt="">
+                        <img src="assets/cartao/caixa.webp" alt="">
+                        <img src="assets/cartao/safetyPay.webp" alt="">
+                        <img src="assets/cartao/jcb.webp" alt="">
+                        <img src="assets/cartao/discover.webp" alt="">
+                    </div>
+                    <div class="footer-parceiros-logos">
+                        <img src="assets/cartao/aura.webp" alt="">
+                        <img src="assets/cartao/pix.webp" alt="">
+                        <img src="assets/cartao/amazon.svg" alt="">
+                        <img src="assets/cartao/fiat.svg" alt="">
+                        <img src="assets/cartao/honda.svg" alt="">
+                        <img src="assets/cartao/toyota.svg" alt="">
+                    </div>
                 </div>
             </div>
             <div class="text-center py-5 social">
                 <div class="fs-4 py-4">
                     <h1 class="fw-bold">siga-nos!</h1>
-                    <i class="fa-brands fa-square-facebook" style="color: #383333;"></i>
-                    <i class="fa-brands fa-twitter px-3" style="color: #383333;"></i>
+                    <i class="fa-brands fa-facebook-f" style="color: #383333"></i>
+                    <i class="fa-brands fa-twitter" style="color: #383333;"></i>
                     <i class="fa-brands fa-instagram" style="color: #383333;"></i>
                 </div>
                 <p class="footer-text"> © 2023 LOCADRIVE. TODOS OS DIREITOS RESERVADOS.
@@ -473,8 +479,7 @@ session_start();
     </div>
 
     <div class="buttonzap">
-        <a href='https://api.whatsapp.com/send?phone=55999999999&' class="icon" target='_blank'><i
-                class="fab fa-whatsapp"></i></a>
+        <a href='https://api.whatsapp.com/send?phone=55999999999&' class="icon" target='_blank'><i class="fab fa-whatsapp"></i></a>
     </div>
 
     <script src="./js/index.js"></script>

@@ -2,8 +2,21 @@
     
     include $_SERVER['DOCUMENT_ROOT'] . "/Projeto-Locadrive/src/config/conexao.php";
     include $_SERVER['DOCUMENT_ROOT'] ."/Projeto-Locadrive/src/Model/Cliente.php";
+    
+    $checkEmail = $_POST['emailValid'];
 
-    if(isset($_POST['nomeValid']) and isset($_POST['usuarioValid']) and isset($_POST['sobrenomeValid']) and isset($_POST['senhaValid']) and isset($_POST['cidadeValid']) and isset($_POST['estadoValid']) and isset($_POST['cepValid']) and isset($_POST['telefoneValid']) and isset($_POST['emailValid']) and isset($_POST['dataValid'])){
+    $sql = $connect->prepare("SELECT cliente.email FROM cliente WHERE email = '$checkEmail' ");
+    $sql->execute();
+    $test = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+    if(($test[0]['email'] ?? NULL) == $checkEmail){
+        $res = array("email" => "invalid");
+        header('Content-Type: application/json');
+        echo json_encode($res);
+    }
+    else{
+
+        if(isset($_POST['nomeValid']) and isset($_POST['usuarioValid']) and isset($_POST['sobrenomeValid']) and isset($_POST['senhaValid']) and isset($_POST['cidadeValid']) and isset($_POST['estadoValid']) and isset($_POST['cepValid']) and isset($_POST['telefoneValid']) and isset($_POST['emailValid']) and isset($_POST['dataValid'])){
             $cliente = new Cliente();
             $cliente->__set("nome", $_POST['nomeValid']);
             $cliente->__set("sobrenome", $_POST['sobrenomeValid']);
@@ -30,5 +43,9 @@
                 $cliente->__get("data"),    
             ));
             
-            echo "sucesso!";
+            $res = array("email" => "valid");
+            header('Content-Type: application/json');
+            echo json_encode($res);
+        }
     }
+   

@@ -79,5 +79,21 @@ header {
     margin-left: 50px;
 }
 
+.feedback{
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background-color: #ffffffa2;
+    position: absolute;
+    top: 0;
+}
+
+.feedback-content{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 

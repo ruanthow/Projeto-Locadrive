@@ -274,7 +274,6 @@ window.updateCliente = function (){
     if (campos[0].value != "" && campos[1].value != "" && campos[2].value != "" && campos[3].value != "" && campos[4].value != "" && campos[5].value != "" && campos[6].value != "" && campos[7].value != 0 && campos[8].value != "" && campos[9].value != "") {
         updateCliente(dados);
         msgErro[10].style.display = "none";
-
     }
     else {
         msgErro[10].style.display = "block";

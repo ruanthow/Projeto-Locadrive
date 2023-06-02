@@ -42,7 +42,7 @@
               <strong>Editar</strong>
             </div>
           </button>
-          <button class="btnAction">
+          <button class="btnAction" onclick="htmlDeletar()">
             <div class="d-flex justify-content-center align-items-center">
               <div class="iconDelete">
                 <img src="./assets/iconDelete.svg" alt="">
@@ -91,6 +91,7 @@
   <script defer type="module" src="./js/updateCliente.js"></script>
   <script defer type="module" src="../components/htmlCliente.js"></script>
   <script defer type="module" src="../components/validacao.js"></script>
+  <script src="./js/deletarCliente.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 </body>

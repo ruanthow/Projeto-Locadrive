@@ -42,6 +42,7 @@ body {
 
 header {
     background-color: white;
+   
     filter: drop-shadow(0px 50px 250px rgba(0, 0, 0, 0.137));
 }
 
@@ -142,10 +143,6 @@ header {
 
 .slider img, svg {
     border-radius: 20px;
-}
-
-.slide-box{
-
 }
 
 .slider-box img{
@@ -681,7 +678,8 @@ footer p {
 }
 
 .pag img {
-    width: 55px;
+    width: 48px;
+    height: 48px;
     padding: 7px;
     transition: 0.4s;
 }
@@ -689,7 +687,7 @@ footer p {
 .pag img:hover {
     border-radius: 5px;
     background-color: #00000012;
-    width: 55px;
+    width: 48px;
     padding: 7px;
     transition: 0.4s;
 }
@@ -732,8 +730,13 @@ footer p {
 
  /*Medida 1024*/
 
- @media (max-width: 768px) { 
-
+ @media (max-width: 834px) { 
+    header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+    }
     .mobile{
         display: flex;
     }
@@ -818,11 +821,17 @@ footer p {
         height: 100%;
     }
 
-    .slider{
-        position: relative;
-        display: flex;
-        padding-top: 86px;
-        z-index: -1;
+    .section-oferta{
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+
+    .oferta-box h1{
+        margin-bottom: 24px;
+    }
+
+    .oferta{
+        padding: 0;
     }
 
     .banner{
@@ -856,12 +865,7 @@ footer p {
     }
 
     #personagem2{
-        margin: 0;
-    }
-
-    .quem-somos{
-        margin-bottom: 16px;
-        
+        margin: 16px 0;
     }
 
     .ajuda-card{
@@ -882,8 +886,37 @@ footer p {
         font-size: 12pt;
         margin: 0 16px;
     }
-
-    .footer-info p{
-        width: 90%;
+    .footer-logo{
+        display: flex;
+        justify-content: center;
     }
+    .footer-infos {
+        display: none;
+    }
+
+    .footer-parceiros{
+        flex-direction: row;
+    }
+
+    .footer-parceiros-logos{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .pag img {
+        width: 60px;
+        height: 60px;
+        padding: 7px;
+        transition: 0.4s;
+    }
+    
+    .pag img:hover {
+        border-radius: 5px;
+        background-color: #00000012;
+        width: 60px;
+        padding: 7px;
+        transition: 0.4s;
+    }
+
   }

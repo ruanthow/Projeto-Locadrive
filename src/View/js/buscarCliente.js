@@ -74,6 +74,7 @@ function getUserFromUpdate(){
 
 function inputValues(client){
     let campos = document.querySelectorAll(".required");
+    
     campos[0].value = client[0].nome
     campos[1].value = client[0].sobrenome
     campos[2].value = client[0].usuario

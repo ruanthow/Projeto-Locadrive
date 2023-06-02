@@ -187,3 +187,31 @@ window.htmlEditar = function (){
     paramsCampos(".required", ".validacao", ".validacaoData");
 }
 
+window.htmlDeletar =  function(){
+  renderConteudo.innerHTML = 
+  `
+    <div>
+      <div class='col-12' id="formSearch">
+      <div class='menuPesquisa d-flex align-items-center'>
+        <h4>Clientes</h4>
+        <div class="menuPesquisaInput">
+          <input class='form-input' type='text' id="inputSearch" placeholder="Pesquisar" />
+          <button type='button' id="btnSearch" onclick="alertaDelete()">
+            <div>
+              <img src="./assets/Arrow - Left.svg" alt="">
+            </div>
+          </button>
+        </div>
+        <div class='col-2'>
+          <select id="typeData" class='menuPesquisaSelect form-select' aria-label='Default select example'>
+            <option value='id'>ID</option>
+          </select>
+        </div>
+      </div>
+      <div class="alertaConfirmacao d-flex justify-content-center align-items-center">
+        
+      </div>
+    </div>
+    </div>
+  `
+}

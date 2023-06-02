@@ -10,7 +10,21 @@ export function receberValores(valores){
             datatype: 'json'
         })
             .done((data) => {
-                console.log(data);
+                let feedback = document.querySelector(".feedback");
+                let feedbackContent = document.querySelector(".feedback-content");
+                let validacaoEnviar = document.getElementById("validacaoEnviar");
+                if(data.email == "valid"){
+                    feedback.style.display = "flex";
+                    feedbackContent.innerHTML = "<lottie-player src='https://assets2.lottiefiles.com/private_files/lf30_hsabbeks.json' background='transparent' speed='2' style='width: 100%; height: 100%;' autoplay></lottie-player>";
+                    setTimeout(()=>{
+                        window.location.href = "http://localhost/Projeto-Locadrive/src/View/login.php";
+                    },3000)
+                }
+                else if(data.email == "invalid"){
+                    validacaoEnviar.innerHTML = "Este email já esta em uso";
+                    validacaoEnviar.style.display = "block"
+                }
+                
             })
             .fail((jqXHR, textStatus, errorThrown) => {
                 console.log(errorThrown);
