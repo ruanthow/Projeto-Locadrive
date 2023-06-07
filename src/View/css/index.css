@@ -115,6 +115,10 @@ header {
 
 /*Sliders*/
 
+.img-mobile {
+    display: none;
+}
+
 .slider {
     overflow: hidden;
     padding-top: 30px;
@@ -158,12 +162,15 @@ header {
     justify-content: center;
 }
 
+
+
 .nav-manual .manual-btn, .nav-auto div {
     border: 1px solid rgb(197, 197, 197);
     padding: 5px;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s;
+    display: none;
 }
 
 .nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
@@ -743,8 +750,8 @@ footer p {
     .nav{
         display: flex;
         background-color: #fff;
-       
-        
+        filter: drop-shadow(0px 50px 250px rgba(0, 0, 0, 0.511));
+        height: 80px;
     }
 
     .nav-buttons{
@@ -758,27 +765,24 @@ footer p {
     }
    
     .nav-mobile-button{
-        
         height: 40px;
         width: 50px;
         margin-right: 8px;
         margin-top: 8px;
         padding: 0px 8px;
-        background-color: #550FED;
         border: none;
-        border-radius: 8px;
+        
+        background-color: white;
 
     }
 
     .nav-mobile-button span{
         display: block;
-
-       
         width: 100%;
-        height: 2px;
-        margin-bottom: 8px;
-        
-        background-color: #ffffff;
+        height: 3px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        background-color: #211717;
 
     }
     .nav-mobile-button span:first-child{
@@ -796,24 +800,39 @@ footer p {
         top: 0;
         left: 0;
         background-color: #550FED;
-
         transition: all ease 0.2s;
     }
 
     .nav-mobile-menu li{
         width: 100% !important;
         color: #fff;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid #834bfb;
         margin-bottom: 16px;
         padding-left: 8px;
     }
     
+    .nav-mobile-menu p {
+        font-size: 20px;
+        padding-left: 25px;
+    }
+
     .nav-menu-close{
         height: 40px;
         width: 40px;
         background-color: transparent;
         border: none;
 
+    }
+
+    .img-desktop {
+        display: none;
+    }
+
+    .img-mobile {
+        display: block;
+        width: 100%;
+        margin-top: 80px;
+        padding-right: 10px;
     }
 
     .nav-menu-close img{
@@ -859,10 +878,12 @@ footer p {
         margin-bottom: 16px !important;
     }
 
+  
     .informacao{
         display: flex;
         flex-direction: column;
     }
+
 
     #personagem2{
         margin: 16px 0;

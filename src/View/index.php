@@ -63,22 +63,22 @@ if (isset($_SESSION['user'])) {
                             </div>
                             <a href="./login.php">
                                 <li>
-                                    <p>Login</p>
+                                    <p>LOGIN</p>
                                 </li>
                             </a>
                             <a href="./register.html">
                                 <li>
-                                    <p>Crie sua conta</p>
+                                    <p>CRIE SUA CONTA</p>
                                 </li>
                             </a>
                             <a href="">
                                 <li class="">
-                                    <p>Contato</p>
+                                    <p>CONTATO</p>
                                 </li>
                             </a>
                             <a href="">
                                 <li class="">
-                                    <p>Ajuda</p>
+                                    <p>AJUDA</p>
                                 </li>
                             </a>
                         </div>
@@ -112,15 +112,18 @@ if (isset($_SESSION['user'])) {
                 <input type="radio" name="btn-radio" id="radio3">
 
                 <div class="slide-box primeiro">
-                    <img src="assets/banner1.webp" alt="slide 1">
+                    <img class="img-desktop" src="assets/banner1.webp" alt="slide 1">
+                    <img class="img-mobile" src="assets/banner-mobile.jpg" alt="slide 1">
                 </div>
 
                 <div class="slide-box">
-                    <img src="assets/banner2.webp" alt="slide 1">
+                    <img class="img-desktop" src="assets/banner2.webp" alt="slide 1">
+                    <img class="img-mobile" src="assets/banner-mobile2.jpg" alt="slide 1">
                 </div>
 
                 <div class="slide-box">
-                    <img src="assets/banner3.webp" alt="slide 1">
+                    <img class="img-desktop" src="assets/banner3.webp" alt="slide 1">
+                    <img class="img-mobile" src="assets/banner-mobile3.jpg" alt="slide 1">
                 </div>
 
 
@@ -282,7 +285,7 @@ if (isset($_SESSION['user'])) {
 
 
     <section class="container-fluid d-flex flex-column pergunta-box justify-content-center align-items-center">
-        <div class="col-8 d-flex flex-column">
+        <div class="col-md-8 d-flex flex-column">
             <h2 class="text-center">DÚVIDAS FREQUENTES</h2>
             <div class="col">
                 <button class="accordion">Como o LocaDrive encontra tantos carros para alugar a preços tão
