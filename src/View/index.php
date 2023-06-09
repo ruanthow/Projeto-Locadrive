@@ -41,9 +41,9 @@ if (isset($_SESSION['user'])) {
             <ul class="nav-options row">
                 <div class="nav-logo col-xxl-6 col-xl-6 col-lg-6 col-6">
                     <a href="">
-                    <li>
-                        <img src="./assets/logo.svg" alt="" style="height: 60px; width: 180px;">
-                    </li>
+                        <li>
+                            <img src="./assets/logo.svg" alt="" style="height: 60px; width: 180px;">
+                        </li>
                     </a>
                 </div>
                 <div class="mobile col-6">
@@ -93,8 +93,21 @@ if (isset($_SESSION['user'])) {
                         <img src="./assets/icon-help.svg" alt="" style="padding-right: 16px ;">
                         <p>Ajuda</p>
                     </li>
-                    <li class="nav-button">
-                        <a href="./login.php"><button><?= $user != NULL ? $user['usuario'] : 'Entrar' ?></button></a>
+                    <li class="nav-user d-flex align-items-center">
+                        <div class="d-flex align-items-center">
+                            <div class="user-icon">
+                                <img src="./assets/user-icon.svg" alt="">
+                            </div>
+                            <button class="nav-user-button d-flex  align-items-center">
+                                <p class="my-0 mx-1">JulileuMaira...</p>
+                                <div>
+                                    <img src="./assets/caret-down.svg" alt="">
+                                </div>
+                            </button>
+                        </div>
+                        <div class="submenu-user">
+                            <p class="my-0">Logout</p>
+                        </div>
                     </li>
                 </div>
             </ul>

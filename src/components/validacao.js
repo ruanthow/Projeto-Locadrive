@@ -241,8 +241,10 @@ window.enviar = function () {
 
     }
 
+    console.log(dados);
 
     if (nomeValid != "" && sobrenomeValid != "" && usuarioValid != "" && senhaValid != "" && cidadeValid != "" && estadoValid != "" && cepValid != "" && telefoneValid != 0 && emailValid != "" && dataValid != "") {
+        console.log("entrou");
         receberValores(dados);
         msgErro[10].style.display = "none";
 

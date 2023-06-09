@@ -24,7 +24,7 @@
         }
 
         function logando(){
-            $timeout = 10;
+            $timeout = 3600;
 
             //Set the maxlifetime of the session
             ini_set("session.gc_maxlifetime", $timeout);

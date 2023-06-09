@@ -5,7 +5,7 @@ function getAllUsers(){
     let currentOption = document.querySelector("#typeData");
     let inputSearch = document.querySelector("#inputSearch");
     let tableBody = document.querySelector("#tableBody");
-
+    
     
     let response = [];
     let dados = {
@@ -34,6 +34,7 @@ function getAllUsers(){
                                 <td>${client.cep}</td>
                                 <td>${client.data_nasc}</td>
                             </tr>
+                           
                         `
                 )
             })

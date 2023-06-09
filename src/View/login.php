@@ -1,9 +1,9 @@
-<?php 
-        
-        if(isset($_COOKIE['PHPSESSID'])){
-            header("Refresh:0");
-            header("Location: http://localhost/Projeto-Locadrive/src/View/index.php");
-        }
+<?php
+
+if (isset($_COOKIE['PHPSESSID'])) {
+    header("Refresh:0");
+    header("Location: http://localhost/Projeto-Locadrive/src/View/index.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -15,8 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Locadrive</title>
 
 </head>
@@ -46,7 +45,11 @@
                 <p>Esqueci a minha senha. Clique aqui para redefinir</p>
                 <div class="modal-buttons col-xxl-12 col-lg-12">
                     <button type="submit" onclick="logar()">Login</button>
-                    <a href="./register.html"><button>Registrar nova conta</button></a>
+                    <a href="./register.html">
+                        <button>
+                            Registrar nova conta
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>

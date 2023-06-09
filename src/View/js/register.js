@@ -13,6 +13,7 @@ export function receberValores(valores){
                 let feedback = document.querySelector(".feedback");
                 let feedbackContent = document.querySelector(".feedback-content");
                 let validacaoEnviar = document.getElementById("validacaoEnviar");
+                console.log(data);
                 if(data.email == "valid"){
                     feedback.style.display = "flex";
                     feedbackContent.innerHTML = "<lottie-player src='https://assets2.lottiefiles.com/private_files/lf30_hsabbeks.json' background='transparent' speed='2' style='width: 100%; height: 100%;' autoplay></lottie-player>";
