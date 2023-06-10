@@ -26,7 +26,7 @@ function buscarCarro() {
                         <p><span>R$187,70</span></p>
                         <p>*Proteções e taxa de aluguel (12%)<br> não inclusas neste valor.</p>
                     </div>
-                    <button class="but-card">Reserve Agora</button>
+                    <button class="but-card" onclick="abrirModal()">Reserve Agora</button>
                 </div>
                 `
 
