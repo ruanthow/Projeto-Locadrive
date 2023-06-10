@@ -95,6 +95,22 @@
             <h2>Escolha seu veiculo</h2>
             <p>As melhores condicoes para voce reservar e aproveitar</p>
         </div>
+
+
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h1>TITULO DO CARRO</h1>
+                        <p>AQUI VÃO AS INFORMAÇÕES DO CARRO</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-dismiss="modal" onclick="fecharModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <section class="container d-flex">
             <!--FIM DO TITULO-->
             <!--INICIO DOS CARROS-->
@@ -171,11 +187,11 @@
                 <p class="footer-text"> © 2023 LOCADRIVE. TODOS OS DIREITOS RESERVADOS.
                 </p>
             </div>
-            <button onclick="buscarCarro()">TESTE</button>
         </footer>
-            <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-            <script src="./js/buscarCarro.js"></script>
-            
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+        <script src="./js/buscarCarro.js"></script>
+        <script src="./js/modal.js"></script>
+        <script document.onload>buscarCarro()</script>
 </body>
 
 </html>
