@@ -221,34 +221,6 @@ if (isset($_SESSION['user'])) {
             <div class="aluguel-de-carro">
                 <h2 class="text-center">Conheça a nossa Frota</h2>
                 <p class="text-center mb-5">As melhores condições para você reservar e aproveitar</p>
-                <div class="botao-box row">
-                    <div class="col-xl-4 col-lg-12 ">
-                        <input class="botao-grande" type="text" placeholder="Retirada" />
-                    </div>
-                    <div class="col-xl-2 col-lg-12">
-                        <input class="botao-pequeno" type="date" placeholder="Data" />
-                    </div>
-                    <div class="col-xl-2 col-lg-12">
-                        <input class="botao-pequeno" type="time" placeholder="Hora" />
-                    </div>
-                    <div class="col-xl-2 col-lg-12">
-                        <input class="botao-pequeno" type="text" placeholder="Cupom" />
-                    </div>
-                </div>
-                <div class="botao-box2 row ">
-                    <div class="col-xl-4 col-lg-12">
-                        <input class="botao-grande" type="text" placeholder="Devolução" />
-                    </div>
-                    <div class="col-xl-2 col-lg-12">
-                        <input class="botao-pequeno" type="date" placeholder="Data" />
-                    </div>
-                    <div class="col-xl-2 col-lg-12">
-                        <input class="botao-pequeno" type="time" placeholder="Hora" />
-                    </div>
-                    <div class="col-xl-2 col-lg-12">
-                        <button>Buscar</button>
-                    </div>
-                </div>
             </div>
 
         </section>
