@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/carros.css">
+    <link rel="stylesheet" href="css/modalCarro.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
@@ -101,11 +102,44 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <h1>TITULO DO CARRO</h1>
-                        <p>AQUI VÃO AS INFORMAÇÕES DO CARRO</p>
+                        <h1 id="tipoCarro"><!--TITULO--></h1>
+                        <img id="imagemCarro" src="" alt="Imagem do Carro">
+                        <h2 id="nomeCarro"></h2>
+                        <h3 id="preçoCarro"></h3>
+                        <p id="descriçãoCarro"><!-- AQUI VÃO AS INFORMAÇÕES DO CARRO--></p> 
+                    </div>
+                    <div>
+                        <div class="botao-box row">
+                            <div class="col-xl-4 col-lg-12 ">
+                                <input class="botao-grande" type="text" placeholder="Retirada" />
+                            </div>
+                            <div class="col-xl-2 col-lg-12">
+                                <input class="botao-pequeno" type="date" placeholder="Data" />
+                            </div>
+                            <div class="col-xl-2 col-lg-12">
+                                <input class="botao-pequeno" type="time" placeholder="Hora" />
+                            </div>
+                            <div class="col-xl-2 col-lg-12">
+                                <input class="botao-pequeno" type="text" placeholder="Cupom" />
+                            </div>
+                        </div>
+                        <div class="botao-box2 row ">
+                            <div class="col-xl-4 col-lg-12">
+                                <input class="botao-grande" type="text" placeholder="Devolução" />
+                            </div>
+                            <div class="col-xl-2 col-lg-12">
+                                <input class="botao-pequeno" type="date" placeholder="Data" />
+                            </div>
+                            <div class="col-xl-2 col-lg-12">
+                                <input class="botao-pequeno" type="time" placeholder="Hora" />
+                            </div>
+                            <div class="col-xl-2 col-lg-12">
+                                <button>Confirmar</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-secondary" data-dismiss="modal" onclick="fecharModal()">Close</button>
+                        <button class="btn btn-secondary" data-dismiss="modal" onclick="fecharModal()">Fechar</button>
                     </div>
                 </div>
             </div>
@@ -190,8 +224,7 @@
         </footer>
         <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
         <script src="./js/buscarCarro.js"></script>
-        <script src="./js/modal.js"></script>
-        <script document.onload>buscarCarro()</script>
+        <script src="./js/modalCarro.js"></script>
 </body>
 
 </html>
