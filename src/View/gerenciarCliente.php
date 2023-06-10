@@ -1,3 +1,15 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION['user'])) {
+        $user = $_SESSION['user'];
+        if($user['privilegio'] == 0){
+            header("Location: http://localhost/Projeto-Locadrive/src/View/");
+        }
+    }
+    
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -22,7 +34,7 @@
     <div class="col-12 d-flex ">
       <div class="sideMenu col-2">
         <div class="nameAdm">
-          <h3>Julio Cesar</h3>
+          <?=  '<h3>'. $user['nome'] .'</h3>' ?>
         </div>
         <div class="actionClient">
           <h5>Clientes</h5>
@@ -77,6 +89,13 @@
               <strong>Deletar</strong>
             </div>
           </button>
+        </div>
+        <div class="actionExit">
+          
+              <a href="./login.php" class="btnExit d-flex justify-content-center align-items-center w-100">
+                <strong >Sair</strong>
+              </a>
+      
         </div>
       </div>
       <div class="renderConteudo col-10">

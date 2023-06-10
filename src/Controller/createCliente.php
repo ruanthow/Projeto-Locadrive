@@ -29,7 +29,7 @@
             $cliente->__set("cep", $_POST['cepValid']);
             $cliente->__set("data", $_POST['dataValid']);
 
-            $sql = $connect->prepare("INSERT INTO cliente VALUES (null,?,?,?,?,?,?,?,?,?,?)");
+            $sql = $connect->prepare("INSERT INTO cliente VALUES (null,?,?,?,?,?,?,?,?,?,?,0)");
             $sql->execute(array(
                 $cliente->__get("nome"),
                 $cliente->__get("sobrenome"),

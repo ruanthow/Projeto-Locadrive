@@ -1,10 +1,12 @@
 <?php
 session_start();
+
 if (isset($_SESSION['user'])) {
     $user = $_SESSION['user'];
+   
 } else {
     $user = NULL;
-
+   
     unset($_COOKIE['PHPSESSID']);
     setcookie('PHPSESSID', null, -1, '/');
 }
@@ -61,11 +63,22 @@ if (isset($_SESSION['user'])) {
                                     <img src="./assets/fechar.png" alt="">
                                 </button>
                             </div>
-                            <a href="./login.php">
-                                <li>
-                                    <p>LOGIN</p>
-                                </li>
-                            </a>
+                            <?php
+                                if($user != NULL){
+                                    echo '  <a>
+                                                <li>
+                                                    <p> Usuário: '. $user['nome'] . '</p>
+                                                </li>
+                                            </a>';
+                                }
+                                else{
+                                    echo '  <a href="./login.php">
+                                                <li>
+                                                    <p>LOGIN</p>
+                                                </li>
+                                            </a>';
+                                }
+                            ?>
                             <a href="./register.html">
                                 <li>
                                     <p>CRIE SUA CONTA</p>
@@ -81,6 +94,15 @@ if (isset($_SESSION['user'])) {
                                     <p>AJUDA</p>
                                 </li>
                             </a>
+                            <?php
+                                 if($user != NULL && $user['privilegio'] == 1){
+                                    echo '  <a href="./gerenciarCliente.php">
+                                                <li>
+                                                    <p>GERENCIAR</p>
+                                                </li>
+                                            </a>';
+                                }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -93,22 +115,59 @@ if (isset($_SESSION['user'])) {
                         <img src="./assets/icon-help.svg" alt="" style="padding-right: 16px ;">
                         <p>Ajuda</p>
                     </li>
-                    <li class="nav-user d-flex align-items-center">
-                        <div class="d-flex align-items-center">
-                            <div class="user-icon">
-                                <img src="./assets/user-icon.svg" alt="">
-                            </div>
-                            <button class="nav-user-button d-flex  align-items-center">
-                                <p class="my-0 mx-1">JulileuMaira...</p>
-                                <div>
-                                    <img src="./assets/caret-down.svg" alt="">
+                    <?php 
+                        if($user != NULL){
+                            if($user['privilegio'] == 1){
+                                echo '<li class="nav-user d-flex align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <div class="user-icon">
+                                        <img src="./assets/user-icon.svg" alt="">
+                                    </div>
+                                    <button class="nav-user-button d-flex  align-items-center" onclick="showMenuLogado()">
+                                        <p class="my-0 mx-1">'. $user["nome"] . '</p>
+                                        <div>
+                                            <img src="./assets/caret-down.svg" alt="">
+                                        </div>
+                                    </button>
                                 </div>
-                            </button>
-                        </div>
-                        <div class="submenu-user">
-                            <p class="my-0">Logout</p>
-                        </div>
-                    </li>
+                                <div class="submenu-user d-flex flex-column">
+                                    <div class="btn-box-button">
+                                        <button class="btn-user-button" onclick="deslogar()">Logout</button> 
+                                    </div>
+                                    <div class="btn-box-button">
+                                    <a href='.'./gerenciarCliente.php'.'><button class="btn-user-button">Gerenciar</button></a> 
+                                    </div>
+                                </div>
+                                </li>';
+                            }
+                            else{
+                                echo '<li class="nav-user d-flex align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <div class="user-icon">
+                                        <img src="./assets/user-icon.svg" alt="">
+                                    </div>
+                                    <button class="nav-user-button d-flex  align-items-center" onclick="showMenuLogado()">
+                                        <p class="my-0 mx-1">'. $user["nome"] . '</p>
+                                        <div>
+                                            <img src="./assets/caret-down.svg" alt="">
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="submenu-user d-flex flex-column">
+                                    <div class="btn-box-button">
+                                        <button class="btn-user-button" onclick="deslogar()">Logout</button> 
+                                    </div>
+                                </div>
+                                </li>';
+                            }
+                            
+                        }   
+                        else{
+                            echo "<li class='nav-button'>
+                                <a href='./login.php'><button>Entrar</button></a>
+                            </li>";
+                        }
+                    ?>
                 </div>
             </ul>
 
@@ -499,6 +558,7 @@ if (isset($_SESSION['user'])) {
     </div>
 
     <script src="./js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 </body>
 
 </html>

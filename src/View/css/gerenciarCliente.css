@@ -29,6 +29,12 @@
     
 }
 
+.actionExit{
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
 
  #btnSearch img{
     background-color: #5101FF;
@@ -43,7 +49,7 @@
 
 
 
-.btnAction{
+.btnAction, .btnExit{
     background-color: transparent;
     border: none;
     height: 60px;
@@ -51,7 +57,7 @@
     transition: 1s;
 }
 
-.btnAction:hover{
+.btnAction:hover, .btnExit:hover{
     background-color: #202020;
     border: none;
     height: 60px;
@@ -61,6 +67,19 @@
     filter: invert(1);
 }
 
+.btnExit{
+    width: 100%;
+    font-weight: 700;
+    text-decoration: none;
+    color: #39393a;
+}
+
+
+.btnExit:hover{
+    background-color: #ca2e2e;
+    filter: invert(0);
+    color: #fff;
+}
 
 
 

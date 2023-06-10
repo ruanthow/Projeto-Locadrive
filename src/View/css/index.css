@@ -118,20 +118,46 @@ header {
 }
 
 .submenu-user{
-    background-color: #01e675;
+    overflow: hidden;
+    background-color: #550FED;
 
     width: 185px;
-    height: 150px;
+    height: auto;
+    
+    transform-origin:top;
+    transform: scaleY(0);
 
-    display: flex;
+    border: 1px solid #fff;
     top: 85%;
     left: 0;
     right: 0;
     position: absolute;
-    z-index: 99999999;
-
-
+    z-index: 9;
+    transition: all ease 0.2s;
 }
+
+.btn-box-button a{
+    text-decoration: none !important;
+}
+
+.btn-box-button{
+    border-bottom: 1px solid #fff;
+}
+
+.btn-user-button{
+    width: 100%;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    padding: 8px;
+}
+
+.btn-user-button:hover{
+    background-color: #01e675;
+}
+
 
 .user-icon{
     min-width: 40px;

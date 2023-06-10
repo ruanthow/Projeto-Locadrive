@@ -45,10 +45,9 @@
         }
 
         function logout(){           
-            unset($_COOKIE[$this->s_name]);
-            setcookie($this->s_name, null, -1, '/'); 
-            session_unset();
-            session_destroy();
+            unset($_COOKIE['PHPSESSID']);
+            setcookie('PHPSESSID', null, -1, '/');
+            $_SESSION["user"] = NULL;
         }
     }
 ?>
