@@ -1,3 +1,9 @@
+let carro 
+
+window.onload=()=>{
+    buscarCarro()
+}
+
 function buscarCarro() {
 
     let htmlcarros = document.querySelector(".espaco")
@@ -8,7 +14,8 @@ function buscarCarro() {
         type: 'GET',
         datatype: 'json'
     }).done((data) => {
-        carros = JSON.parse(data);
+        let carros = JSON.parse(data);
+        carro = carros
         for (let l = 0; l < carros.length ; l++) {
             if(l == 0 || l%3 == 0){
                 let element = document.createElement("div");
@@ -26,7 +33,7 @@ function buscarCarro() {
                         <p><span>R$187,70</span></p>
                         <p>*Proteções e taxa de aluguel (12%)<br> não inclusas neste valor.</p>
                     </div>
-                    <button class="but-card" onclick="abrirModal()">Reserve Agora</button>
+                    <button class="but-card" onclick="abrirModal(${l})">Reserve Agora</button>
                 </div>
                 `
 
@@ -38,3 +45,19 @@ function buscarCarro() {
 
 
 }
+
+function abrirModal(index) {
+    console.log(carro[index])
+    var modal = document.getElementById("myModal");
+    document.querySelector("#tipoCarro").innerText = carro[index].tipo;
+    document.querySelector("#imagemCarro").src = carro[index].imagem;
+    document.querySelector("#nomeCarro").innerText = carro[index].nome;
+    document.querySelector("#preçoCarro").innerText = "R$ "+carro[index].preco;
+    document.querySelector("#descriçãoCarro").innerText = carro[index].descricao;
+    modal.style.display = "block";
+}
+
+function fecharModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }   
