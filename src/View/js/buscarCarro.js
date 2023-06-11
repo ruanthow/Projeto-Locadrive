@@ -1,3 +1,9 @@
+let teste;
+
+window.onload = ()=>{
+    buscarCarro()
+}
+
 function buscarCarro() {
 
     let htmlcarros = document.querySelector(".espaco")
@@ -8,7 +14,8 @@ function buscarCarro() {
         type: 'GET',
         datatype: 'json'
     }).done((data) => {
-        carros = JSON.parse(data);
+       let carros = JSON.parse(data);
+        teste = carros;
         for (let l = 0; l < carros.length ; l++) {
             if(l == 0 || l%3 == 0){
                 let element = document.createElement("div");
@@ -26,7 +33,8 @@ function buscarCarro() {
                         <p><span>R$187,70</span></p>
                         <p>*Proteções e taxa de aluguel (12%)<br> não inclusas neste valor.</p>
                     </div>
-                    <button class="but-card" onclick="abrirModal()">Reserve Agora</button>
+                    <button class="but-card" onclick="abrirModal(${l})">Reserve Agora</button>
+                    ${console.log(l)}
                 </div>
                 `
 
@@ -37,4 +45,8 @@ function buscarCarro() {
 
 
 
+}
+
+function abrirModal(num){
+    console.log(teste[num]);
 }

@@ -42,7 +42,7 @@ if (isset($_SESSION['user'])) {
         <nav class="nav container">
             <ul class="nav-options row">
                 <div class="nav-logo col-xxl-6 col-xl-6 col-lg-6 col-6">
-                    <a href="">
+                    <a href="./index.php">
                         <li>
                             <img src="./assets/logo.svg" alt="" style="height: 60px; width: 180px;">
                         </li>
@@ -109,11 +109,11 @@ if (isset($_SESSION['user'])) {
                 <div class="nav-buttons col-xxl-6 col-xl-6 col-lg-6">
                     <li class="nav-contato">
                         <img src="./assets/icon-phone.svg" alt="" style="padding-right: 16px ;">
-                        <p>Contato</p>
+                        <a href="#contato" style="text-decoration: none; color: #000;"><p>Contato</p></a>
                     </li>
                     <li class="nav-ajuda">
                         <img src="./assets/icon-help.svg" alt="" style="padding-right: 16px ;">
-                        <p>Ajuda</p>
+                        <a href="#ajuda" style="text-decoration: none; color: #000;"><p>Ajuda</p></a>
                     </li>
                     <?php 
                         if($user != NULL){
@@ -356,7 +356,7 @@ if (isset($_SESSION['user'])) {
     </div>
 
 
-    <section class="container-fluid d-flex flex-column pergunta-box justify-content-center align-items-center">
+    <section class="container-fluid d-flex flex-column pergunta-box justify-content-center align-items-center" id="ajuda">
         <div class="col-md-8 d-flex flex-column">
             <h2 class="text-center">DÚVIDAS FREQUENTES</h2>
             <div class="col">
@@ -539,7 +539,7 @@ if (isset($_SESSION['user'])) {
                     </div>
                 </div>
             </div>
-            <div class="text-center py-5 social">
+            <div class="text-center py-5 social" id="contato">
                 <div class="fs-4 py-4">
                     <h1 class="fw-bold">siga-nos!</h1>
                     <i class="fa-brands fa-facebook-f" style="color: #383333"></i>
