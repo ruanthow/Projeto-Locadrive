@@ -1,26 +1,28 @@
-let teste;
+let carro 
 
-window.onload = ()=>{
+window.onload=()=>{
     buscarCarro()
 }
 
 function buscarCarro() {
 
     let htmlcarros = document.querySelector(".espaco")
-    let contador = 0
 
     $.ajax({
         url: '/Projeto-Locadrive/src/Controller/getCarro.php',
         type: 'GET',
         datatype: 'json'
     }).done((data) => {
-       let carros = JSON.parse(data);
-        teste = carros;
+        let carros = JSON.parse(data);
+        carro = carros
+        htmlcarros.innerHTML = "";
+        let element = document.createElement("div");
+        var div = htmlcarros.appendChild(element)
         for (let l = 0; l < carros.length ; l++) {
-            if(l == 0 || l%3 == 0){
-                let element = document.createElement("div");
-                var div = htmlcarros.appendChild(element)
-                div.classList.add("d-flex")    
+            if(l == 0 || l%3 == 0){  
+                element = document.createElement("div");
+                div = htmlcarros.appendChild(element)
+                div.classList.add("rowCars", "d-flex")    
             }
             div.innerHTML += `
                 <div class="cards-car mx-3">
@@ -34,7 +36,6 @@ function buscarCarro() {
                         <p>*Proteções e taxa de aluguel (12%)<br> não inclusas neste valor.</p>
                     </div>
                     <button class="but-card" onclick="abrirModal(${l})">Reserve Agora</button>
-                    ${console.log(l)}
                 </div>
                 `
 
@@ -47,6 +48,17 @@ function buscarCarro() {
 
 }
 
-function abrirModal(num){
-    console.log(teste[num]);
+function abrirModal(index) {
+    var modal = document.getElementById("myModal");
+    document.querySelector("#tipoCarro").innerText = carro[index].tipo;
+    document.querySelector("#imagemCarro").src = carro[index].imagem;
+    document.querySelector("#nomeCarro").innerText = carro[index].nome;
+    document.querySelector("#preçoCarro").innerText = "R$ "+carro[index].preco;
+    document.querySelector("#descriçãoCarro").innerText = carro[index].descricao;
+    modal.style.display = "block";
 }
+
+function fecharModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }   

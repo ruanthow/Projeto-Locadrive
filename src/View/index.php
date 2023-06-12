@@ -221,34 +221,6 @@ if (isset($_SESSION['user'])) {
             <div class="aluguel-de-carro">
                 <h2 class="text-center">Conheça a nossa Frota</h2>
                 <p class="text-center mb-5">As melhores condições para você reservar e aproveitar</p>
-                <div class="botao-box row">
-                    <div class="col-xl-4 col-lg-12 ">
-                        <input class="botao-grande" type="text" placeholder="Retirada" />
-                    </div>
-                    <div class="col-xl-2 col-lg-12">
-                        <input class="botao-pequeno" type="date" placeholder="Data" />
-                    </div>
-                    <div class="col-xl-2 col-lg-12">
-                        <input class="botao-pequeno" type="time" placeholder="Hora" />
-                    </div>
-                    <div class="col-xl-2 col-lg-12">
-                        <input class="botao-pequeno" type="text" placeholder="Cupom" />
-                    </div>
-                </div>
-                <div class="botao-box2 row ">
-                    <div class="col-xl-4 col-lg-12">
-                        <input class="botao-grande" type="text" placeholder="Devolução" />
-                    </div>
-                    <div class="col-xl-2 col-lg-12">
-                        <input class="botao-pequeno" type="date" placeholder="Data" />
-                    </div>
-                    <div class="col-xl-2 col-lg-12">
-                        <input class="botao-pequeno" type="time" placeholder="Hora" />
-                    </div>
-                    <div class="col-xl-2 col-lg-12">
-                        <button>Buscar</button>
-                    </div>
-                </div>
             </div>
 
         </section>
@@ -267,7 +239,7 @@ if (isset($_SESSION['user'])) {
                         <h3>Sua reserva garante um dos carros desse grupo.
                             Modelo sujeito à disponibilidade da agência.</h3>
                     </div>
-                    <a class="btn btn-primary fw-bold" href="#">Conferir Grupo</a>
+                    <a class="btn btn-primary fw-bold" href="./carros.php">Conferir Grupo</a>
                 </div>
                 <div class="bloco-principal col p-4" id="bloco2">
                     <img src="./assets/sedan.png" alt="sedan">
@@ -277,7 +249,7 @@ if (isset($_SESSION['user'])) {
                         <h3>Sua reserva garante um dos carros desse grupo.
                             Modelo sujeito à disponibilidade da agência.</h3>
                     </div>
-                    <a class="btn btn-primary fw-bold" href="#">Conferir Grupo</a>
+                    <a class="btn btn-primary fw-bold" href="./carros.php">Conferir Grupo</a>
                 </div>
                 <div class="bloco-principal col p-4">
                     <img src="./assets/suv.png" alt="suv">
@@ -287,7 +259,7 @@ if (isset($_SESSION['user'])) {
                         <h3>Sua reserva garante um dos carros desse grupo.
                             Modelo sujeito à disponibilidade da agência.</h3>
                     </div>
-                    <a class="btn btn-primary fw-bold" href="#">Conferir Grupo</a>
+                    <a class="btn btn-primary fw-bold" href="./carros.php">Conferir Grupo</a>
                 </div>
             </div>
         </section>
@@ -305,7 +277,6 @@ if (isset($_SESSION['user'])) {
                         <p>Somos para todos! Usamos a tecnologia a favor dos nossos clientes, como um meio para
                             conseguirmos
                             preços mais acessíveis.</p>
-
                     </div>
                 </div>
             </div>
@@ -319,7 +290,6 @@ if (isset($_SESSION['user'])) {
                         <p>Utilizamos pontos de programas de fidelidade que seriam perdidos ou não utilizaVdos para que
                             mais
                             pessoas possam comprar passagens a preços mais acessíveis.</p>
-
                     </div>
                 </div>
             </div>
@@ -332,13 +302,10 @@ if (isset($_SESSION['user'])) {
                         <h2>NOSSO BLOG</h2>
                         <p>O locadrive é a nossa plataforma de experiências de viagem e traz a você dicas especiais de
                             destinos, cultura, gastronomia e hospedagem.</p>
-
                     </div>
                 </div>
             </div>
         </section>
-
-
 
 
         <!-- CENTRAL DE AJUDA -->
