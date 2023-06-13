@@ -204,16 +204,20 @@
 
         <!--MODAL-->
         <div class="modal" id="myModal">
-            <div class="modal-dialog modal-lg">
+
+            <div class="modal-box">
+                
                 <div class="modal-content">
+
                     <div class="modal-body">
-                        <h1 id="tipoCarro"><!--TITULO--></h1>
                         <img id="imagemCarro" src="" alt="Imagem do Carro">
+                        <h1 id="tipoCarro"><!--TITULO--></h1>
                         <h2 id="nomeCarro"></h2>
                         <h3 id="preçoCarro"></h3>
                         <p id="descriçãoCarro"><!-- AQUI VÃO AS INFORMAÇÕES DO CARRO--></p>
                     </div>
-                    <div class="container">
+
+                    <div class="container-fluid">
                         <div class="botao-box row">
                             <div class="col-xl-4 col-lg-12 ">
                                 <input class="botao-grande" type="text" placeholder="Retirada" />

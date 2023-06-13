@@ -132,23 +132,24 @@ header {
 }
 
 .boxFiltro {
-    border: 1px solid grey;
+    border: 1px solid rgb(220, 217, 217);
     border-radius: 10px;
     padding: 30px;
     text-align: center;
     display: inline-block;
-    max-width: 790px;
+    max-width: 450px;
     margin-bottom: 60px;
 }
 
 .boxOpcaoFiltro {
-    width: 100%;
+    padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 .boxFiltro h1 {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(227, 227, 227);
 }
 
 .opcaoFiltro {
@@ -160,9 +161,10 @@ header {
     width: 60px;
     height: 38px;
     border-radius: 8px;
-    margin-right: 5px;
+    margin-right: 10px;
     border: 1px solid grey;
     background-color: white;
+    transition: 0.4s;
 }
 
 .btnFiltro:hover {
@@ -174,6 +176,8 @@ header {
     font-weight: 900;
     margin-top: 8px;
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 /*FIM FILTRO*/
@@ -181,16 +185,39 @@ header {
 
 
 /*MODAL*/
+
+.modal {
+    backdrop-filter: blur(15px);
+    background-color: #00000011;
+}
+
+.modal-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+
+
+.modal-content {
+    border-radius: 20px !important;
+    width: 1080px !important;
+}
+
 .modal-body{
+    justify-content: center;
     text-align: center;
     align-items: center;
-    margin-top: 100px;
+    padding-top: 50px !important;
 }
 #tipoCarro{
     text-transform: uppercase;
+    font-weight: 700;
 }
 #imagemCarro{
-    width: 60%;
+    width: 36%;
     margin-bottom: 15px;
 }
 #nomeCarro{
@@ -198,6 +225,15 @@ header {
 }
 .botao-box {
     margin-left: 5px;
+}
+
+#preçoCarro {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+#nomeCarro {
+    font-size: 20px;
 }
 
 
@@ -229,7 +265,7 @@ header {
     transition: 1.4s;
     filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.021));
     border: 1px solid grey;
-    margin: 0px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
 
 }
 
@@ -241,7 +277,7 @@ header {
     padding: 20px;
     border-radius: 25px;
     text-align: center;
-    filter: drop-shadow(20px 10px 20px rgba(0, 0, 0, 0.318));
+    filter: drop-shadow(20px 10px 20px rgba(0, 0, 0, 0.079));
     transition: 0.3s;
 
 }
@@ -251,9 +287,14 @@ header {
 
 }
 
+p {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
 .infoClasses {
     min-height: 135px;
-    max-height: 135px;
+    max-height: 200px;
     margin-bottom: 8px;
 }
 
@@ -267,6 +308,10 @@ header {
     color: black;
     font-size: 12px;
     font-weight: 400;
+}
+
+.cardsCar {
+    border: 1px solid #e2e2e2;
 }
 
 .cardsCar button {
@@ -283,9 +328,10 @@ h3 {
 .preco{
     background-color: #f2f2f2;
     border-radius: 10px;
+    padding: 8px;
 }
 .preco span{
-    font-size: 20px;
+    font-size: 38px;
     font-weight: 600;
 }
 /*FIM CARROS*/
@@ -471,7 +517,7 @@ footer p {
     }
 
     .cardsCar{
-        margin-bottom: 16px !important;
+        margin: 0 0 20px 0 !important;
     }
 
     .footer{
@@ -519,5 +565,23 @@ footer p {
     /*FIM FILTRO*/
     .rowCars{
         flex-direction: column;
+    }
+
+    .modal-box {
+        padding: 0 10px 0 10px !important;
+
+    }
+
+    .modal-content {
+        margin-top: 306px !important;
+    }
+
+    .modal-body {
+        padding-top: 50% !important;
+        margin-top: -179px !important;
+    }
+
+    #imagemCarro {
+        width: 65%;
     }
 }
