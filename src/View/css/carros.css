@@ -110,6 +110,73 @@ header {
     transition: 0.2s;
 }
 
+.nav-user{
+    width: 100%;
+    position: relative;
+}
+
+.submenu-user{
+    overflow: hidden;
+    background-color: #550FED;
+
+    width: 185px;
+    height: auto;
+    
+    transform-origin:top;
+    transform: scaleY(0);
+
+    border: 1px solid #fff;
+    top: 85%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 9;
+    transition: all ease 0.2s;
+}
+
+.btn-box-button a{
+    text-decoration: none !important;
+}
+
+.btn-box-button{
+    border-bottom: 1px solid #fff;
+}
+
+.btn-user-button{
+    width: 100%;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    padding: 8px;
+}
+
+.btn-user-button:hover{
+    background-color: #01e675;
+}
+
+
+.user-icon{
+    min-width: 40px;
+    height: 40px;
+}
+.user-icon img{
+    height: 100%;
+    width: 100%;
+}
+
+.nav-user-button{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+}
+.nav-user-button p{
+    font-weight: 700;
+    font-size: 11pt;
+}
+
+
 
 /*titulo*/
 .titulo {
