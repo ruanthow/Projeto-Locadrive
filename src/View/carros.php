@@ -1,9 +1,9 @@
 <?php
-    //função para acessar essa pagina apenas logado 
-    // if (!isset($_COOKIE['PHPSESSID'])) {
-    //     header("Refresh:0");
-    //     header("Location: http://localhost/Projeto-Locadrive/src/View/login.php");
-    // }
+//função para acessar essa pagina apenas logado 
+// if (!isset($_COOKIE['PHPSESSID'])) {
+//     header("Refresh:0");
+//     header("Location: http://localhost/Projeto-Locadrive/src/View/login.php");
+// }
 ?>
 
 <!DOCTYPE html>
@@ -20,10 +20,8 @@
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
@@ -58,56 +56,153 @@
                                     <img src="./assets/fechar.png" alt="">
                                 </button>
                             </div>
-                            <a href="./login.php">
-                                <li>
-                                    <p>Login</p>
-                                </li>
-                            </a>
+                            <?php
+                                if($user != NULL){
+                                    echo '  <a>
+                                                <li>
+                                                    <p> Usuário: '. $user['nome'] . '</p>
+                                                </li>
+                                            </a>';
+                                }
+                                else{
+                                    echo '  <a href="./login.php">
+                                                <li>
+                                                    <p>LOGIN</p>
+                                                </li>
+                                            </a>';
+                                }
+                            ?>
                             <a href="./register.html">
                                 <li>
-                                    <p>Crie sua conta</p>
+                                    <p>CRIE SUA CONTA</p>
                                 </li>
                             </a>
                             <a href="">
                                 <li class="">
-                                    <p>Contato</p>
+                                    <p>CONTATO</p>
                                 </li>
                             </a>
                             <a href="">
                                 <li class="">
-                                    <p>Ajuda</p>
+                                    <p>AJUDA</p>
                                 </li>
                             </a>
+                            <?php
+                                 if($user != NULL && $user['privilegio'] == 1){
+                                    echo '  <a href="./gerenciarCliente.php">
+                                                <li>
+                                                    <p>GERENCIAR</p>
+                                                </li>
+                                            </a>';
+                                }
+                            ?>
                         </div>
                     </div>
                 </div>
                 <div class="nav-buttons col-xxl-6 col-xl-6 col-lg-6">
                     <li class="nav-contato">
                         <img src="./assets/icon-phone.svg" alt="" style="padding-right: 16px ;">
-                        <p>Contato</p>
+                        <a href="#contato" style="text-decoration: none; color: #000;"><p>Contato</p></a>
                     </li>
                     <li class="nav-ajuda">
                         <img src="./assets/icon-help.svg" alt="" style="padding-right: 16px ;">
-                        <p>Ajuda</p>
+                        <a href="#ajuda" style="text-decoration: none; color: #000;"><p>Ajuda</p></a>
                     </li>
-                    <li class="nav-button">
-                        <a href="./login.php"><button>Entrar</button></a>
-                    </li>
+                    <?php 
+                        if($user != NULL){
+                            if($user['privilegio'] == 1){
+                                echo '<li class="nav-user d-flex align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <div class="user-icon">
+                                        <img src="./assets/user-icon.svg" alt="">
+                                    </div>
+                                    <button class="nav-user-button d-flex  align-items-center" onclick="showMenuLogado()">
+                                        <p class="my-0 mx-1">'. $user["nome"] . '</p>
+                                        <div>
+                                            <img src="./assets/caret-down.svg" alt="">
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="submenu-user d-flex flex-column">
+                                    <div class="btn-box-button">
+                                        <button class="btn-user-button" onclick="deslogar()">Logout</button> 
+                                    </div>
+                                    <div class="btn-box-button">
+                                    <a href='.'./gerenciarCliente.php'.'><button class="btn-user-button">Gerenciar</button></a> 
+                                    </div>
+                                </div>
+                                </li>';
+                            }
+                            else{
+                                echo '<li class="nav-user d-flex align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <div class="user-icon">
+                                        <img src="./assets/user-icon.svg" alt="">
+                                    </div>
+                                    <button class="nav-user-button d-flex  align-items-center" onclick="showMenuLogado()">
+                                        <p class="my-0 mx-1">'. $user["nome"] . '</p>
+                                        <div>
+                                            <img src="./assets/caret-down.svg" alt="">
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="submenu-user d-flex flex-column">
+                                    <div class="btn-box-button">
+                                        <button class="btn-user-button" onclick="deslogar()">Logout</button> 
+                                    </div>
+                                </div>
+                                </li>';
+                            }
+                            
+                        }   
+                        else{
+                            echo "<li class='nav-button'>
+                                <a href='./login.php'><button>Entrar</button></a>
+                            </li>";
+                        }
+                    ?>
                 </div>
             </ul>
 
         </nav>
-        <!--NAV BAR-->
     </header>
     <!--TITULO-->
+    
     <main>
-        <div class="titulo">
-            <h1 id="classe-car">HATCH</h1>
-            <h2>Escolha seu veiculo</h2>
-            <p>As melhores condicoes para voce reservar e aproveitar</p>
+        <!--TITULO-->
+        <div class="titulo container">
+            <div class="container-fluid text-center">
+                <h1 id="tipo"></h1>
+                <h2>Escolha seu veiculo</h2>
+                <p>As melhores condicoes para voce reservar e aproveitar</p>
+            </div>
         </div>
 
 
+        <!--COMEÇO FILTRO-->
+        <div class="boxPrincipalFiltro container">
+            <div class="boxFiltro container-fluid">
+                <h1>FILTRO</h1>
+                <div class="boxOpcaoFiltro container">
+                    <div class="opcaoFiltro ">
+                        <button class="btnFiltro" onclick=""></button>
+                        <p class="opcao">SUV</p>
+                    </div>
+                    <div class="opcaoFiltro ">
+                        <button class="btnFiltro" onclick="buscarCarro()"></button>
+                        <p class="opcao">HATCH</p>
+                    </div>
+                    <div class="opcaoFiltro ">
+                        <button class="btnFiltro" onclick=""></button>
+                        <p class="opcao">SEDAN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FIM FILTRO-->
+
+
+        <!--MODAL-->
         <div class="modal" id="myModal">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -116,9 +211,9 @@
                         <img id="imagemCarro" src="" alt="Imagem do Carro">
                         <h2 id="nomeCarro"></h2>
                         <h3 id="preçoCarro"></h3>
-                        <p id="descriçãoCarro"><!-- AQUI VÃO AS INFORMAÇÕES DO CARRO--></p> 
+                        <p id="descriçãoCarro"><!-- AQUI VÃO AS INFORMAÇÕES DO CARRO--></p>
                     </div>
-                    <div>
+                    <div class="container">
                         <div class="botao-box row">
                             <div class="col-xl-4 col-lg-12 ">
                                 <input class="botao-grande" type="text" placeholder="Retirada" />
@@ -158,10 +253,13 @@
         <section class="container d-flex">
             <!--FIM DO TITULO-->
             <!--INICIO DOS CARROS-->
-            <div class="col-10">
+            <div class="container">
                 <div class="d-flex col flex-column">
-                    <div class="espaco col-3 d-flex flex-column justify-content-center">
+
+                    <div class="espaco principal ">
+                        
                     </div>
+
                 </div>
             </div>
         </section>
@@ -171,22 +269,22 @@
     <div class="footer-box">
         <footer class="footer container d-flex flex-column">
             <div class="d-flex container">
-                <div class="col"><img src="assets/logo.svg" alt="">
+                <div class="footer-logo col"><img src="assets/logo.svg" alt="">
                 </div>
-                <div class="col pe-5">
+                <div class="footer-infos col pe-5">
                     <p class="fw-bold">Somos LocaDrive</p>
                     <h1>Ajuda</h1>
                     <h1>Configurações de Privacidade</h1>
                     <h1>Entrar</h1>
                 </div>
-                <div class="col pe-5">
+                <div class="footer-infos  col pe-5">
                     <p class="fw-bold">Informações Importantes</p>
                     <h1>Política de Cookies</h1>
                     <h1>Política de Privacidade</h1>
                     <h1>Termos de Serviço</h1>
                     <h1>Dados da Empresa</h1>
                 </div>
-                <div class="col">
+                <div class="footer-infos col">
                     <p class="fw-bold">Promova seu negócio</p>
                     <h1>Explorar</h1>
                     <h1>Empresa</h1>
@@ -234,6 +332,7 @@
         </footer>
         <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
         <script src="./js/buscarCarro.js"></script>
+        <script src="./js/index.js"></script>
 </body>
 
 </html>

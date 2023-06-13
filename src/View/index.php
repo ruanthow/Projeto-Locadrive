@@ -230,7 +230,7 @@ if (isset($_SESSION['user'])) {
         <section>
             <div class="principal row">
                 <div class="bloco-principal col p-4">
-                    <img src="./assets/hatch.png" alt="carro hatch">
+                    <img src="./assets/carros/suv-mitsubishi.png" alt="carro hatch">
                     <h1 class="fs-2 py-3">SUV</h1>
                     <div class="info-classes">
                         <h2>Veículo similar a: Jeep Compass 1.3 Turbo, Toyota Corolla Cross 2.0, Mitsubishi Eclipse
@@ -242,7 +242,7 @@ if (isset($_SESSION['user'])) {
                     <a class="btn btn-primary fw-bold" href="./carros.php">Conferir Grupo</a>
                 </div>
                 <div class="bloco-principal col p-4" id="bloco2">
-                    <img src="./assets/sedan.png" alt="sedan">
+                    <img src="./assets/carros/sedan-corola.png" alt="sedan">
                     <h1 class="fs-2 py-3">SEDAN</h1>
                     <div class="info-classes">
                         <h2>Veículo similar a: Toyota Corolla GLI FAST, GM Cruze Sedan FAST, dentre outros.</h2>
@@ -252,7 +252,7 @@ if (isset($_SESSION['user'])) {
                     <a class="btn btn-primary fw-bold" href="./carros.php">Conferir Grupo</a>
                 </div>
                 <div class="bloco-principal col p-4">
-                    <img src="./assets/suv.png" alt="suv">
+                    <img src="./assets/carros/hatch-polo.png" alt="suv">
                     <h1 class="fs-2 py-3">HATCH </h1>
                     <div class="info-classes">
                         <h2>Veículo similar a: Fiat Argo 1.0, Hyundai HB20 1.0, GM Onix LT 1.0, dentre outros.</h2>

@@ -35,7 +35,7 @@ ul {
 body {
     background: #ffffff !important;
     font-family: 'Nunito', sans-serif;
-    
+
 }
 
 header {
@@ -53,7 +53,7 @@ header {
     width: 100%;
 }
 
-.mobile{
+.mobile {
     display: none;
 }
 
@@ -99,198 +99,208 @@ header {
 
 }
 
-
 .nav-ajuda p,
 .nav-contato p {
     font-weight: bold;
     margin-bottom: 0px;
 }
 
+.nav-button button:hover {
+    background-color: #0b5ed7;
+    transition: 0.2s;
+}
 
 
-.titulo{
-    text-align: center;
-    margin: 40px 0px 100px 0px;
-   
-}
-.titulo h1{
-    font-size: 80px;
-    font-weight: bolder;
-}
-.box-pag{
-    max-width: 320px;
-    max-height: 280px;
-    margin-left: 10%;
-}
-.main-box{
-    text-align: center;
-    border: 1px solid grey;
+/*titulo*/
+.titulo {
+    margin: 40px 0px 80px 0px;
     width: 100%;
-    height: 100%;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 11px;
 }
-.option{
+
+.titulo h1 {
+    width: 100%;
+    font-size: 80px;
+    font-weight: 900;
+}
+
+/*fim titulo*/
+
+
+/*FILTRO*/
+.boxPrincipalFiltro {
+    text-align: center;
+}
+
+.boxFiltro {
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    display: inline-block;
+    max-width: 790px;
+    margin-bottom: 60px;
+}
+
+.boxOpcaoFiltro {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxFiltro h1 {
+    border-bottom: 1px solid black;
+}
+
+.opcaoFiltro {
     display: flex;
     margin-top: 10px;
 }
-.text-box{
-    border-bottom: 1px inset grey;
-    margin-bottom: 20px;
-}
-.box-option{
-    margin-right: 15px;
-    width: 40px;
-    border-radius: 15px;
+
+.btnFiltro {
+    width: 60px;
+    height: 38px;
+    border-radius: 8px;
+    margin-right: 5px;
     border: 1px solid grey;
+    background-color: white;
 }
-.btn-box{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-.btn-box:hover{
+
+.btnFiltro:hover {
     background-color: #550FED;
-    cursor: pointer;
-    transition: 10.s;
+    transition: 0.4s;
 }
-.bloco-principal a {
+
+.opcao {
+    font-weight: 900;
+    margin-top: 8px;
+    width: 100%;
+}
+
+/*FIM FILTRO*/
+
+
+
+/*MODAL*/
+.modal-body{
+    text-align: center;
+    align-items: center;
+    margin-top: 100px;
+}
+#tipoCarro{
+    text-transform: uppercase;
+}
+#imagemCarro{
+    width: 60%;
+    margin-bottom: 15px;
+}
+#nomeCarro{
+    text-transform: uppercase;
+}
+.botao-box {
+    margin-left: 5px;
+}
+
+
+
+/*Carros*/
+.cardsCar button {
     background-color: #8148fc;
     padding: 20px 60px 20px 60px;
     border-radius: 10px;
     border: none;
     transition: 0.4s;
+    margin-top: 30px;
 }
 
 .principal {
-   width: 100%;
-   margin-left: 0px !important;
-   margin-top: 64px !important;
+    width: 100%;
+    margin-left: 0px !important;
+    margin-bottom: 30px;
+    justify-content: center;
 }
 
-.bloco-principal{
+.cardsCar {
     border: 1px solid #ffffff;
     background-color: rgb(255, 255, 255);
-    width:100%;
+    width: 100%;
     height: 100%;
     border-radius: 25px;
     text-align: center;
     transition: 1.4s;
     filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.021));
- 
+    border: 1px solid grey;
+    margin: 0px 10px 10px 10px;
+
 }
 
-.bloco-principal:hover{
+.cardsCar:hover {
     border: 1px solid #eae6e6;
     background-color: rgb(255, 255, 255);
-    width:100%;
+    width: 100%;
     height: 100%;
     padding: 20px;
     border-radius: 25px;
     text-align: center;
-    filter: drop-shadow(20px 10px 20px rgba(0, 0, 0, 0.067));
+    filter: drop-shadow(20px 10px 20px rgba(0, 0, 0, 0.318));
     transition: 0.3s;
- 
+
 }
 
-#bloco2{
-    margin: 0 32px;
-}
-
-.bloco-principal img {
+.cardsCar img {
     width: 90%;
+
 }
 
-.info-classes{
+.infoClasses {
     min-height: 135px;
     max-height: 135px;
     margin-bottom: 8px;
 }
 
-.info-classes h2 {
+.infoClasses h2 {
     font-size: 16px;
     font-weight: 500;
     color: #5f5f5f;
 }
 
-.info-classes h3 {
-    color: #5f5f5f;
+.infoClasses p {
+    color: black;
     font-size: 12px;
     font-weight: 400;
 }
 
-.bloco-principal a {
+.cardsCar button {
     color: white;
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
 }
 
-.bloco-principal h2,
+.cardsCar h2,
 h3 {
     margin-bottom: 20px;
 }
-
-.cards-car{
-    max-width: 700px;
-    background-color: white;
-    border-radius: 15px;
-    border: 1px solid grey;
-    padding: 30px;
-}
-.img-car{
-    width: 300px;
-}
-.espaco{
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: 10px;
-}
-.texo-card{
-    color: #5F5F5F;
-    font-size: 10px;
-
-}
-.descricao-car{
-    color: #5F5F5F;
-    font-size: 20px;
-    font-weight: 900;
-}
 .preco{
-    text-align: center;
-    background-color: #eee;
-    border-radius: 15px;
-    width: 300px;
-    height: 180px;
-    display: inline-block;
-}
-.preco p{
-    font-size: 15px;
-    font-weight: 500px;
-
+    background-color: #f2f2f2;
+    border-radius: 10px;
 }
 .preco span{
-    font-size: 40px;
-    font-weight: 500px;
-}
-.but-card{
-    background-color: #550FED;
-    color: white;
-    border-style: none;
-    width: 290px;
-    height: 60px;
-    border-radius: 40px;
-    margin-top: 20px;
     font-size: 20px;
+    font-weight: 600;
 }
+/*FIM CARROS*/
+
+
+
+/*Footer*/
+
 .footer-box {
+    margin-top: 100px;
     padding-top: 70px;
     background-color: #fcf8f8;
-    margin-top: 50px;
 }
 
-.footer-text{
+.footer-text {
     font-size: 13px;
 }
 
@@ -301,7 +311,7 @@ footer h1 {
     font-weight: 400;
 }
 
-footer h1:hover{
+footer h1:hover {
     font-size: 18px;
     padding-bottom: 10px;
     font-weight: 400;
@@ -335,7 +345,8 @@ footer p {
 }
 
 .pag img {
-    width: 55px;
+    width: 48px;
+    height: 48px;
     padding: 7px;
     transition: 0.4s;
 }
@@ -343,7 +354,170 @@ footer p {
 .pag img:hover {
     border-radius: 5px;
     background-color: #00000012;
-    width: 55px;
+    width: 48px;
     padding: 7px;
     transition: 0.4s;
+}
+
+
+/*Medida 1024*/
+
+@media (max-width: 834px) { 
+    header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+    .mobile{
+        display: flex;
+    }
+    .nav{
+        display: flex;
+        background-color: #fff;
+        filter: drop-shadow(0px 50px 250px rgba(0, 0, 0, 0.511));
+        height: 80px;
+    }
+
+    .nav-buttons{
+        display: none;
+    }
+
+    .nav-options{
+        display: flex;
+        width: 100%;
+        margin: 0 !important;
+    }
+   
+    .nav-mobile-button{
+        height: 40px;
+        width: 50px;
+        margin-right: 8px;
+        margin-top: 8px;
+        padding: 0px 8px;
+        border: none;
+        
+        background-color: white;
+
+    }
+
+    .nav-mobile-button span{
+        display: block;
+        width: 100%;
+        height: 3px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        background-color: #211717;
+
+    }
+    .nav-mobile-button span:first-child{
+       margin-top: 7px;
+
+    }
+
+    .nav-mobile-menu{
+        z-index: 99;
+        overflow: hidden;
+        display: flex;
+        position: absolute;
+        height: 100vh;
+        width: 0px;
+        top: 0;
+        left: 0;
+        background-color: #550FED;
+        transition: all ease 0.2s;
+    }
+
+    .nav-mobile-menu li{
+        width: 100% !important;
+        color: #fff;
+        border-bottom: 1px solid #834bfb;
+        margin-bottom: 16px;
+        padding-left: 8px;
+    }
+    
+    .nav-mobile-menu p {
+        font-size: 20px;
+        padding-left: 25px;
+    }
+
+    .nav-menu-close{
+        height: 40px;
+        width: 40px;
+        background-color: transparent;
+        border: none;
+
+    }
+
+    .img-desktop {
+        display: none;
+    }
+
+    .img-mobile {
+        display: block;
+        width: 100%;
+        margin-top: 80px;
+        padding-right: 10px;
+    }
+
+    .nav-menu-close img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .principal{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cardsCar{
+        margin-bottom: 16px !important;
+    }
+
+    .footer{
+        width: 100% !important;
+    }
+    .footer-infos {
+        display: none;
+    }
+    main {
+        margin-top: 110px;
+    }
+
+    .boxOpcaoFiltro {
+        display: block;
+        margin-top: none;
+    }
+
+    /*FILTRO*/
+    .boxFiltro{
+        padding: 10px;
+    }
+    .boxOpcaoFiltro {
+        width: 100%;
+        display: inline;
+    }
+    .opcaoFiltro {
+        display: flex;
+        text-align: left;
+    }
+
+    .btnFiltro {
+        width: 50px;
+        height: 38px;
+        border-radius: 8px;
+        border: 1px solid grey;
+        background-color: white;
+    }
+    .opcao {
+        font-weight: 800;
+        width: 100%;
+    }
+    .principal{
+        margin-bottom: 0px;
+    }
+    /*FIM FILTRO*/
+    .rowCars{
+        flex-direction: column;
+    }
 }
