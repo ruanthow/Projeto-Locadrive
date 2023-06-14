@@ -1,17 +1,19 @@
 <?php
 //função para acessar essa pagina apenas logado 
-session_start();
+// session_start();
 
-if (isset($_SESSION['user'])) {
-    $user = $_SESSION['user'];
+// if (isset($_SESSION['user'])) {
+//     $user = $_SESSION['user'];
    
-} else {
-    $user = NULL;
-    unset($_COOKIE['PHPSESSID']);
-    setcookie('PHPSESSID', null, -1, '/');
-    header("Refresh:0");
-    header("Location: http://localhost/Projeto-Locadrive/src/View/login.php");
-}
+// } else {
+//     $user = NULL;
+//     unset($_COOKIE['PHPSESSID']);
+//     setcookie('PHPSESSID', null, -1, '/');
+//     header("Refresh:0");
+//     header("Location: http://localhost/Projeto-Locadrive/src/View/login.php");
+// }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -193,15 +195,15 @@ if (isset($_SESSION['user'])) {
                 <h1>FILTRO</h1>
                 <div class="boxOpcaoFiltro container">
                     <div class="opcaoFiltro ">
-                        <button class="btnFiltro" onclick=""></button>
+                        <button class="btnFiltro" onclick="filtros('suv', 0)"></button>
                         <p class="opcao">SUV</p>
                     </div>
                     <div class="opcaoFiltro ">
-                        <button class="btnFiltro" onclick="buscarCarro()"></button>
+                        <button class="btnFiltro" onclick="filtros('hatch', 1)"></button>
                         <p class="opcao">HATCH</p>
                     </div>
                     <div class="opcaoFiltro ">
-                        <button class="btnFiltro" onclick=""></button>
+                        <button class="btnFiltro" onclick="filtros('sedan', 2)"></button>
                         <p class="opcao">SEDAN</p>
                     </div>
                 </div>
@@ -251,7 +253,7 @@ if (isset($_SESSION['user'])) {
                                 <input class="botao-pequeno" type="time" placeholder="Hora" />
                             </div>
                             <div class="col-xl-2 col-lg-12">
-                                <button>Confirmar</button>
+                                <button onclick="ConfirmarCompra()">Confirmar</button>
                             </div>
                         </div>
                     </div>
@@ -342,9 +344,9 @@ if (isset($_SESSION['user'])) {
                 </p>
             </div>
         </footer>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-        <script src="./js/buscarCarro.js"></script>
-        <script src="./js/index.js"></script>
+        <script defer src="./js/buscarCarro.js"></script>
 </body>
 
 </html>

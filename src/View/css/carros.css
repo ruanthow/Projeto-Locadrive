@@ -225,6 +225,7 @@ header {
 }
 
 .btnFiltro {
+  
     width: 60px;
     height: 38px;
     border-radius: 8px;
@@ -234,10 +235,6 @@ header {
     transition: 0.4s;
 }
 
-.btnFiltro:hover {
-    background-color: #550FED;
-    transition: 0.4s;
-}
 
 .opcao {
     font-weight: 900;
@@ -255,7 +252,7 @@ header {
 
 .modal {
     backdrop-filter: blur(15px);
-    background-color: #00000011;
+    background-color: #fff;
 }
 
 .modal-box {
@@ -640,12 +637,12 @@ footer p {
     }
 
     .modal-content {
-        margin-top: 306px !important;
+        margin-top: 492px !important;
     }
 
     .modal-body {
         padding-top: 50% !important;
-        margin-top: -179px !important;
+        margin-top: -177px !important;
     }
 
     #imagemCarro {
