@@ -17,10 +17,33 @@ function buscarCarro() {
         let carros = JSON.parse(data);
         carro = carros
         htmlcarros.innerHTML = "";
-        console.log(carro)
         let element = document.createElement("div");
         var div = htmlcarros.appendChild(element)
+        let newformat
         for (let l = 0; l < carros.length; l++) {
+            let valor = carro[l].preco.toString();
+            if(valor.includes(".")){
+                let antesDaVirgula = valor.substring(0, valor.indexOf("."));
+                let depoisDaVirgula = valor.substring(valor.indexOf("."), 10); 
+                let separador = depoisDaVirgula.split(""); 
+                let contador = separador.length;
+                console.log(separador);
+                console.log(contador);
+                if(contador > 2){
+                     newformat = antesDaVirgula+depoisDaVirgula.replace(".",",")
+                    console.log(newformat);
+                }
+                else if(contador == 2){
+                     newformat = antesDaVirgula+depoisDaVirgula.replace(".",",")+"0"
+                    console.log(newformat);
+                }
+            }
+            else{
+                     newformat = carro[l].preco+",00"
+                    console.log(newformat);
+            }
+            
+           
             if (l == 0 || l % 3 == 0) {
                 element = document.createElement("div");
                 div = htmlcarros.appendChild(element)
@@ -34,7 +57,7 @@ function buscarCarro() {
                 <h2>${carro[l].descricao}</h2>
                 <div class="preco">
                     <p>A partir de:</p>
-                    <p><span>R$${carro[l].preco}</span></p>
+                    <p><span>R$${newformat} /dia</span></p>
                     <p>*Proteções e taxa de aluguel (12%)<br> não inclusas neste valor.</p>
                 </div>
             </div>
@@ -44,7 +67,10 @@ function buscarCarro() {
 
         }
     }).fail((jqXHR, textStatus, errorThrown) => {
-        console.log(errorThrown);
+        htmlcarros.innerHTML = 
+        `<div class="boxAlerta">
+            <h4>Ocorreu um erro entre em contato com os responsáveis</h4>
+        </div>`
     })
 
 

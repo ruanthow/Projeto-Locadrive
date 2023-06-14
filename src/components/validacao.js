@@ -79,8 +79,6 @@ window.validNameSobrenome = function () {
     let campoNome = nomeRegex.test(campos[0].value);
     let campoSobrenome = sobrenomeRegex.test(campos[1].value);
 
-    console.log(campoNome);
-
     if (campoNome && campoSobrenome) {
         setValid(0, 1);
         nomeValid = campos[0].value;
@@ -241,10 +239,9 @@ window.enviar = function () {
 
     }
 
-    console.log(dados);
+
 
     if (nomeValid != "" && sobrenomeValid != "" && usuarioValid != "" && senhaValid != "" && cidadeValid != "" && estadoValid != "" && cepValid != "" && telefoneValid != 0 && emailValid != "" && dataValid != "") {
-        console.log("entrou");
         receberValores(dados);
         msgErro[10].style.display = "none";
 

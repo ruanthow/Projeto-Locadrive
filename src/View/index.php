@@ -79,17 +79,22 @@ if (isset($_SESSION['user'])) {
                                             </a>';
                                 }
                             ?>
-                            <a href="./register.html">
-                                <li>
-                                    <p>CRIE SUA CONTA</p>
-                                </li>
-                            </a>
-                            <a href="">
+                            <?php
+                                if($user == NULL){
+                                    echo '  <a href="./register.html">
+                                                <li>
+                                                    <p>CRIE SUA CONTA</p>
+                                                </li>   
+                                            </a>';
+                                }
+                            ?>
+                            
+                            <a href="#contato">
                                 <li class="">
                                     <p>CONTATO</p>
                                 </li>
                             </a>
-                            <a href="">
+                            <a href="#ajuda">
                                 <li class="">
                                     <p>AJUDA</p>
                                 </li>

@@ -1,9 +1,17 @@
 <?php
 //função para acessar essa pagina apenas logado 
-// if (!isset($_COOKIE['PHPSESSID'])) {
-//     header("Refresh:0");
-//     header("Location: http://localhost/Projeto-Locadrive/src/View/login.php");
-// }
+session_start();
+
+if (isset($_SESSION['user'])) {
+    $user = $_SESSION['user'];
+   
+} else {
+    $user = NULL;
+    unset($_COOKIE['PHPSESSID']);
+    setcookie('PHPSESSID', null, -1, '/');
+    header("Refresh:0");
+    header("Location: http://localhost/Projeto-Locadrive/src/View/login.php");
+}
 ?>
 
 <!DOCTYPE html>

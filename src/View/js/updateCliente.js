@@ -1,3 +1,4 @@
+let renderConteudo = document.querySelector(".renderConteudo");
 
 export function updateCliente(valores){
     $.ajax({
@@ -7,11 +8,18 @@ export function updateCliente(valores){
         datatype: 'json'
     }).done((data)=>{
 
-        console.log(data);
+        renderConteudo.innerHTML = 
+        `<div class="boxAlerta d-flex justify-content-center align-items-center h-100">
+            <h4>Atualizado com sucesso</h4>
+        </div>`
+    
 
     }).fail((jqXHR, textStatus, errorThrown)=>{
 
-        console.log(errorThrown);
+        renderConteudo.innerHTML = 
+        `<div class="boxAlerta d-flex justify-content-center align-items-center h-100">
+            <h4>Ocorreu um erro entre em contato com os responsáveis</h4>
+        </div>`
 
     })
 }
