@@ -10,7 +10,7 @@ if (isset($_SESSION['user'])) {
     unset($_COOKIE['PHPSESSID']);
     setcookie('PHPSESSID', null, -1, '/');
     header("Refresh:0");
-    header("Location: http://localhost/Projeto-Locadrive/src/View/login.php");
+    header("Location: /Projeto-Locadrive/src/View/login.php");
 }
 
 
@@ -347,6 +347,7 @@ if (isset($_SESSION['user'])) {
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
         <script defer src="./js/buscarCarro.js"></script>
+        <script src="./js/index.js"></script>
 </body>
 
 </html>

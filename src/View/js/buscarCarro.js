@@ -120,6 +120,6 @@ function filtros(filtro, numero){
 function ConfirmarCompra(){
     modalContent.innerHTML = "<lottie-player src='https://assets6.lottiefiles.com/packages/lf20_gktj7rsr.json' background='transparent' speed='2' style='width: 100%; height: 100%;' autoplay></lottie-player>";
     setTimeout(()=>{
-        window.location.href = "http://localhost/Projeto-Locadrive/src/View/"
+        window.location.href = "/Projeto-Locadrive/src/View/"
     },3000)
 }

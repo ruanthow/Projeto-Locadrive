@@ -4,8 +4,15 @@
     if (isset($_SESSION['user'])) {
         $user = $_SESSION['user'];
         if($user['privilegio'] == 0){
-            header("Location: http://localhost/Projeto-Locadrive/src/View/");
+            header("Location: /Projeto-Locadrive/src/View/");
         }
+    }
+    else{
+      $user = NULL;
+      unset($_COOKIE['PHPSESSID']);
+      setcookie('PHPSESSID', null, -1, '/');
+      header("Refresh:0");
+      header("Location: /Projeto-Locadrive/src/View/login.php");
     }
     
 ?>
@@ -93,7 +100,7 @@
         </div>
         <div class="actionExit">
           
-              <a href="./login.php" class="btnExit d-flex justify-content-center align-items-center w-100">
+              <a href="./index.php" class="btnExit d-flex justify-content-center align-items-center w-100">
                 <strong >Sair</strong>
               </a>
       

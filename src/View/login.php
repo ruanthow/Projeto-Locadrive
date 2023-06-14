@@ -2,7 +2,7 @@
 
 if (isset($_COOKIE['PHPSESSID'])) {
     header("Refresh:0");
-    header("Location: http://localhost/Projeto-Locadrive/src/View/index.php");
+    header("Location: /Projeto-Locadrive/src/View/index.php");
 }
 ?>
 

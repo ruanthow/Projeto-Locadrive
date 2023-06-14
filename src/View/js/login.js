@@ -18,7 +18,7 @@ function logar() {
             datatype: 'json'
         }).done((data)=>{
             if(data == "logado"){
-                window.location.href = "http://localhost/Projeto-Locadrive/src/View/index.php";
+                window.location.href = "/Projeto-Locadrive/src/View/index.php";
                 msgErro.style.display = "none"
             }
             else{
