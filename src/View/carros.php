@@ -1,17 +1,17 @@
 <?php
 //função para acessar essa pagina apenas logado 
-// session_start();
+session_start();
 
-// if (isset($_SESSION['user'])) {
-//     $user = $_SESSION['user'];
+if (isset($_SESSION['user'])) {
+    $user = $_SESSION['user'];
    
-// } else {
-//     $user = NULL;
-//     unset($_COOKIE['PHPSESSID']);
-//     setcookie('PHPSESSID', null, -1, '/');
-//     header("Refresh:0");
-//     header("Location: http://localhost/Projeto-Locadrive/src/View/login.php");
-// }
+} else {
+    $user = NULL;
+    unset($_COOKIE['PHPSESSID']);
+    setcookie('PHPSESSID', null, -1, '/');
+    header("Refresh:0");
+    header("Location: http://localhost/Projeto-Locadrive/src/View/login.php");
+}
 
 
 ?>
