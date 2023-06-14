@@ -37,8 +37,15 @@ function deletarCliente(){
         datatype: 'json'
 
     }).done((data)=>{
-        console.log(data);
+        let alertaConfirmacao = document.querySelector(".alertaConfirmacao");
+        alertaConfirmacao.innerHTML = 
+        `<div class="boxAlerta">
+            <h4>Deletado com Sucesso!</h4>
+        </div>`
     }).fail((jqXHR, textStatus, errorThrown)=>{
-        console.log(errorThrown);
+        alertaConfirmacao.innerHTML = 
+        `<div class="boxAlerta">
+            <h4>Ocorreu um erro entre em contato com os responsáveis</h4>
+        </div>`
     })
 }
