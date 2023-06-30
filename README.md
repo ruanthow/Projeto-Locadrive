@@ -14,7 +14,7 @@ Essa ideia surgiu após discutimos sobre oque seria o nosso negócio e chegamos 
 
 ## Objetivo do projeto 📍
 - Deve criar uma aplicação web com as seguintes ferramentas: HTML, CSS, JAVASCRIPT, PHP e MYSQL.
-- Deve efetuar criação de cadastro e salvar na base de dados ultilizada.
+- Deve efetuar criação de cadastro e salvar na base de dados.
 - Deve efetuar login na aplicação.
 - Deve conter um sistema de Criar, Ler, Editar, Deletar (CRUD).
 - Deve fazer deploy do projeto.
