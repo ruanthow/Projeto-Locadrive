@@ -2,10 +2,7 @@
 
 # Projeto - LocaDrive :car:	
 
-Essa ideia surgiu após discutimos sobre oque seria o nosso negócio e chegamos em uma forma de ser o meio onde o cliente que precisa alugar um carro seja para viagens, tour em uma cidade, trabalho ou outras funções tivesse um lugar digital para
-alugar um carro de forma simples e rápida, uma locadora de veículos. Seguindo
-essa ideia o grupo também pensou em implementar uma função que o cliente também tivesse a opção de alugar seu veiculo para a nossa empresa e receber um valor mensal por
-esse serviço, porém só seria implementada se conseguisemos entregar as demais tarefas obrigatórias com um tempo de sobra.
+Essa ideia surgiu após discutimos sobre oque seria o nosso negócio e chegamos a uma forma de ser o meio onde o cliente que precisa alugar um carro seja para viagens, tour em uma cidade, trabalho ou outras funções tivesse um lugar digital para alugar um carro de forma simples e rápida, uma locadora de veículos. Seguindo essa ideia o grupo também pensou em implementar uma função que o cliente também tivesse a opção de alugar seu veículo para a nossa empresa e receber um valor mensal por esse serviço, porém só seria implementada se a entrega das demais tarefas obrigatórias tivessem sido concluídas.
 
 ## Regras de negócio 💻
 - O Cliente terá de fazer cadastro antes de fazer qualquer ação no site.
