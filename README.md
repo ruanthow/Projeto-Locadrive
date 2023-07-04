@@ -44,4 +44,3 @@ Ruan Mendonça: https://github.com/ruanthow <br>
 ## :page_with_curl: Documentação. 
 - Está nesse repositório dentro da pasta "web"
 
-## Em construção...
